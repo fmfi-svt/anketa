@@ -100,8 +100,6 @@ class AISUserSource implements UserSourceInterface
         $slugy = array();
 
         foreach ($aisPredmety as $aisPredmet) {
-            $this->dbConn->beginTransaction();
-
             $props = $this->subjectIdentification->identify($aisPredmet['skratka'], $aisPredmet['nazov']);
 
             // Ignorujme duplicitne predmety
@@ -109,6 +107,8 @@ class AISUserSource implements UserSourceInterface
                 continue;
             }
             $slugy[] = $props['slug'];
+
+            $this->dbConn->beginTransaction();
 
             // vytvorime subject v DB ak neexistuje
             // pouzijeme INSERT ON DUPLICATE KEY UPDATE
