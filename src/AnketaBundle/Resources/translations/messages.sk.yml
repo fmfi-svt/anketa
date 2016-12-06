@@ -206,6 +206,7 @@ response:
     odoslat: Odoslať
   list:
     moje_komentare: Moje komentáre
+    komentare: Zoznam pridaných komentárov
     tu_su_komentare: Tu sa nachádza zoznam vašich komentárov.
     pridavanie_z_vysledkov: Komentáre môžete pridávať z jednotlivých stránok s výsledkami.
     upravit_komentar: Upraviť komentár

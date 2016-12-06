@@ -88,11 +88,22 @@ class ResponseController extends Controller {
 
     public function listMineAction($season_slug) {
         $em = $this->get('doctrine.orm.entity_manager');
-        $access = $this->get('anketa.access.statistics');
         $seasonRepo = $em->getRepository('AnketaBundle\Entity\Season');
+        $access = $this->get('anketa.access.statistics');
+        $user = $access->getUser();
         $season = $seasonRepo->findOneBy(array('slug' => $season_slug));
         if (!$access->hasOwnResponses($season)) throw new AccessDeniedException();
-        $user = $access->getUser();
+        return $this->listResponses($season_slug, $user);
+    }
+
+    public function listAction($season_slug) {
+        return $this->listResponses($season_slug, NULL);
+    }
+
+    public function listResponses($season_slug, $user) {
+        $em = $this->get('doctrine.orm.entity_manager');
+        $seasonRepo = $em->getRepository('AnketaBundle\Entity\Season');
+        $season = $seasonRepo->findOneBy(array('slug' => $season_slug));
 
         if ($season == null) {
             $message = $this->get('translator')->trans('response.controller.chybna_sezona', array('%slug%' => $season_slug));
@@ -100,7 +111,10 @@ class ResponseController extends Controller {
         }
 
         $responseRepo = $em->getRepository('AnketaBundle:Response');
-        $query = array('author' => $user, 'season' => $season->getId());
+        $query = array('season' => $season->getId());
+        if (!empty($user)) {
+            $query = $query + array('author' => $user);
+        }
         $responses = $responseRepo->findBy($query);
         $processedResponses = array();
         foreach ($responses as $response) {
@@ -111,7 +125,6 @@ class ResponseController extends Controller {
         }
 
         return $this->render('AnketaBundle:Response:list.html.twig',
-                array('responses' => $processedResponses, 'season' => $season));
+                array('responses' => $processedResponses, 'season' => $season, 'user' => $user));
     }
-
 }

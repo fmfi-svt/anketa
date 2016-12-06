@@ -21,3 +21,9 @@ response_delete:
     defaults: { _controller: AnketaBundle:Response:editResponse, delete: true }
     requirements:
       response_id:   \d+
+
+responses_list:
+    pattern: /odpovede/{season_slug}/list
+    defaults: { _controller: AnketaBundle:Response:list }
+    requirements:
+      season_slug:   "[a-z0-9-]+"

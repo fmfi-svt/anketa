@@ -209,6 +209,7 @@ response:
     upravit_komentar: Edit response
     zmazat_komentar: Delete response
     ziaden_komentar_pridany: You did not add any response so far.
+    komentare: List of all responses
   controller:
     neznama_odpoved: Unknown reponse: %id%
     komentar_bol_ulozeny: Your response was saved.

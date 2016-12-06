@@ -61,6 +61,9 @@ response_edit: '/odpovede/{response_id}/uprav'
 # Desc: /odpovede/nova-odpoved/{section_slug}
 response_new: '/odpovede/nova-odpoved/{section_slug}'
 
+# Desc: /odpovede/{season_slug}/list
+responses_list: '/odpovede/{season_slug}/list'
+
 # Desc: /vysledky
 statistics: /vysledky
 

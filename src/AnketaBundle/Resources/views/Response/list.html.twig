@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+    {% if user %}
     <h1>{{ trans('response.list.moje_komentare') }}</h1>
     <p>
         {{ trans('response.list.tu_su_komentare') }}
@@ -12,12 +13,19 @@
             {{ trans('response.list.pridavanie_z_vysledkov') }}
         {% endif %}
     </p>
-
+    {% else %}
+    <h1>{{ trans('response.list.komentare') }}</h1>
+    {% endif %}
     <div class="results-comments results-comments-official">
     {% for item in responses %}
         <div class='comment' id="odpoved{{ item.response.id }}">
             <div class="comment-top">
-                <strong><a href="{{ item.section.statisticsPath }}">{{ item.section.title }}</a></strong>:
+                <strong><a href="{{ item.section.statisticsPath }}">{{ item.section.title }}</a></strong>:<br />
+                {% if not user %}
+                <small><strong>{{ item.response.author.formattedName }}
+                {%- if item.response.association %} ({{ item.response.association }}){% endif -%}
+                </strong></small>
+                {% endif %}
             </div>
             <p class="comment-comment">{{ item.response.comment|escape|replace({"\n": "<br />"})|raw }}</p>
             {% if access.statistics.canEditResponse(item.response) %}

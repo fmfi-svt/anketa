@@ -58,6 +58,9 @@ response_edit: '/responses/{response_id}/change'
 # Desc: /odpovede/nova-odpoved/{section_slug}
 response_new: '/responses/new-response/{section_slug}'
 
+# Desc: /responses/{season_slug}/list
+responses_list: '/responses/{season_slug}/list'
+
 # Desc: /vysledky
 statistics: /results
 
