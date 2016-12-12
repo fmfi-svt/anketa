@@ -146,7 +146,7 @@ def export_predmet_katedra(args):
     app.d.zobrazitPredmetyButton.click()
 
     with app.collect_operations() as ops:
-        app.d.exportButton.click()
+        app.d.printButton.click()
     with app.collect_operations() as ops2:
         app.awaited_abort_box(ops)
     with app.collect_operations() as ops3:
