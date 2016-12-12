@@ -32,11 +32,11 @@
             "type": "package",
             "package": {
                 "name": "svt/votr",
-                "version": "20151120.1-dev",
+                "version": "20161212-dev",
                 "description": "Next generation AIS frontend",
                 "license": "Apache",
                 "dist": {
-                    "url": "https://github.com/fmfi-svt/votr/archive/74bdeda535c2ea5b4a1b243efd586234cd83ebf4.zip",
+                    "url": "https://github.com/fmfi-svt/votr/archive/d365924aaa9a90979c7ca7ac44d3594c2797da35.zip",
                     "type": "zip"
                 }
             }
