@@ -76,7 +76,7 @@ class ImportPredmetKatedraCommand extends AbstractImportCommand {
             while (($row = $tableReader->readAssocRow()) !== false) {
                 $rows++;
                 
-                $subjectCode = $row['Skratka'];
+                $subjectCode = $row['Kód predmetu'];
                 $stredisko = $row['Stredisko'];
                 $subjectName = $row['Názov'];
 
