@@ -73,7 +73,7 @@ class SubjectIdentification implements SubjectIdentificationInterface
     private function getShortCode($longCode)
     {
         $matches = array();
-        if (preg_match('@/(.*)@', $longCode, $matches) !== 1) {
+        if (preg_match('@^[^/]*/(.*)$@', $longCode, $matches) !== 1) {
             // Nevieme zistit kratky kod
             return $longCode;
         }
