@@ -80,12 +80,13 @@ class ImportUcitelPredmetCommand extends AbstractImportCommand {
                     SELECT a.id, b.id, :season, :isLecturer, :isTrainer
                     FROM User a, Subject b
                     WHERE a.login = :login and b.slug = :slug
-                    ON DUPLICATE KEY UPDATE lecturer=1");
+                    ON DUPLICATE KEY UPDATE lecturer=GREATEST(VALUES(lecturer), TeachersSubjects.lecturer),
+                        trainer=GREATEST(VALUES(trainer), TeachersSubjects.trainer)");
 
         $rows = 0;
-        $rows_success = 0;
-        $rows_incomplete = 0;
-        $rows_unknown = 0;
+        $rowsSuccess = 0;
+        $rowsIncomplete = 0;
+        $rowsUnknown = 0;
         try {
             while (($row = $tableReader->readAssocRow()) !== false) {
                 $rows++;
@@ -105,17 +106,17 @@ class ImportUcitelPredmetCommand extends AbstractImportCommand {
 
                 if (strlen($aisNazov) == 0) {
                     $output->writeln($aisDlhyKod . ': Chýba meno predmetu');
-                    $rows_incomplete++;
+                    $rowsIncomplete++;
+                    continue;
+                }
+                if (strlen($plneMeno) == 0) {
+                    $output->writeln($aisDlhyKod . ': Chýba meno vyučujúceho '.$meno .' '.$priezvisko);
+                    $rowsIncomplete++;
                     continue;
                 }
                 if (strlen($login) == 0) {
                     $output->writeln($aisDlhyKod . ': Chýba login vyučujúceho '.$plneMeno);
-                    $rows_incomplete++;
-                    continue;
-                }
-                if (strlen($plneMeno) == 0) {
-                    $output->writeln($aisDlhyKod . ': Chýba meno vyučujúceho');
-                    $rows_incomplete++;
+                    $rowsIncomplete++;
                     continue;
                 }
 
@@ -131,13 +132,13 @@ class ImportUcitelPredmetCommand extends AbstractImportCommand {
                 $prednasajuci = 0;
                 $cviciaci = 0;
 
-                if ($hodnost == 'P' || $hodnost == 'V') {
+                if ($hodnost == 'P' || $hodnost == 'H' || $hodnost == 'S') {
                     $prednasajuci = 1;
-                } else if ($hodnost == 'C') {
+                } else if ($hodnost == 'C' || $hodnost == 'V') {
                     $cviciaci = 1;
                 } else {
                     $output->writeln($aisDlhyKod . ': neznamy typ vyučujúceho \'' . $hodnost . '\'');
-                    $rows_unknown++;
+                    $rowsUnknown++;
                     continue;
                 }
 
@@ -163,7 +164,7 @@ class ImportUcitelPredmetCommand extends AbstractImportCommand {
                 $insertTeacherSubject->bindValue('isTrainer', $cviciaci);
                 $insertTeacherSubject->execute();
 
-                $rows_success++;
+                $rowsSuccess++;
             }
         } catch (Exception $e) {
             $conn->rollback();
@@ -172,7 +173,7 @@ class ImportUcitelPredmetCommand extends AbstractImportCommand {
 
         $conn->commit();
         $output->writeln("Processed ".$rows." rows from ".$input->getArgument('file'));
-        $output->writeln("Successful rows: ".$rows_success.", incomplete rows: ".$rows_incomplete.", unknown rows: ".$rows_unknown);
+        $output->writeln("Successful rows: ".$rowsSuccess.", incomplete rows: ".$rowsIncomplete.", unknown rows: ".$rowsUnknown);
         fclose($file);
     }
 
