@@ -80,11 +80,13 @@ class Subject {
     public function getCategory()
     {
         $matches = array();
-        $stred = preg_match('@^[^/]*/(.*)$@', $this->getCode(), $matches);
+        $stred = preg_match('@^[^/]*/([^/]*)/.*$@', $this->getCode(), $matches);
         if ($stred == 0) {
+            // Ide o kratky kod typu 1-XXX-NNN/nn
             $zvysok = $this->getCode();
         }
         else {
+            // Ide o dlhy kod typu FMFI-PriF.XXXX/1-XXX-NNN/nn
             $zvysok = $matches[1];
         }
         $matches = array();
