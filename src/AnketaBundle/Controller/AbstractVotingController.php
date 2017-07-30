@@ -24,7 +24,16 @@ class AbstractVotingController extends Controller {
         if (!$access->isVotingOpen()) throw new AccessDeniedException();
 
         if (!$access->userIsStudent()) {
-            $rv = $this->render('AnketaBundle:Hlasovanie:novote.html.twig');
+            // Zistime, ake ma zapisne listy v tomto semestri
+            $semestre = $userSeason->getSeason()->getAisSemesterList();
+            if (empty($semestre)) {
+                    throw new \Exception("Sezona nema nastavene aisSemesters");
+            }
+            $retriever = $this->get('anketa.ais_retriever');
+            $result = $this->aisRetriever->getResult("Neexistujuci_nazov_fakulty", $semestre);
+
+
+            $rv = $this->render('AnketaBundle:Hlasovanie:novote.html.twig', array('ostatne_studia' => $result['ostatne_studia']));
             $rv->setStatusCode(403);
             return $rv;
         }

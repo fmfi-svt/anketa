@@ -10,6 +10,19 @@ V ankete môžu hlasovať iba študenti {{ skratka_fakulty }}.
 Ak študujete na inej fakulte, pozrite sa do <a href="https://anketa.uniba.sk/">zoznamu študentských ankiet</a>.
 </p>
 <p>
+Ak si myslíte, že vám má táto anketa dovoliť hlasovať, napíšte nám na adresu
+<a href="mailto:fmfi-anketa-users@googlegroups.com">fmfi-anketa-users@googlegroups.com.</a>
+Prosíme vás, aby ste pribalili nasledujúci zoznam študijných programov a k nim priradených
+fakúlt, ktoré máte evidované v AISe k tomuto semestru:
+</p>
+<h3>Zoznam študijných programov:</h3>
+<ul>
+    {% for studium in ostatne_studia %}
+        <li> {{ studium.skratka }}:{{ studium.oj }} </li>
+    {% endfor %}
+</ul>
+</br>
+<p>
 V <a href="https://anketa.uniba.sk/demo/">demo verzii ankety</a> si môžete pozrieť, ako vyzerá hlasovanie.
 Odpovede zadané v demo verzii sa nerátajú do normálneho hlasovania.
 </p>
