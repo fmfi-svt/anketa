@@ -58,7 +58,10 @@ class ImportDistribuciaZnamokCommand extends AbstractImportCommand {
             $code = (string) $detail->skratkaPredmet;
             $grade = (string) $detail->hodnotenie;
 
-            if(!in_array($grade, $gradesArray)) continue;
+            if(!in_array($grade, $gradesArray)) {
+                $output->writeln("V predmete ".$code." sa vyskytla neznama znamka ".$grade);
+                continue;
+            }
             if(!isset($subjectsGrades[$code])) $subjectsGrades[$code] = array('A' => 0, 'B' => 0, 'C' => 0, 'D' => 0, 'E' => 0, 'FX' => 0);
             $subjectsGrades[$code][$grade]++;
         }

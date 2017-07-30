@@ -72,16 +72,28 @@ class ImportKatedraCommand extends AbstractImportCommand {
                     INSERT INTO Department (code, name, homepage)
                     VALUES (:code, :name, :homepage)");
 
+        // Pocitadla spracovanych zaznamov
+        $rows = 0;
+        $rowsSuccess = 0;
+        $rowsNotDepartment = 0;
+        $rowsFiltered = 0;
+        $rowsFailed = 0;
+
         try {
             while (($row = $tableResolver->readRow()) !== false) {
+                $rows++;
                 $code = $row['code'];
                 $parentOrgUnit = $row['parent'];
                 $type = $row['type'];
                 $name = $row['name'];
                 $homepage = $row['homepage'];
 
-                if ($type !== 'Kated' && $type !== 'Ústav') continue;
+                if ($type !== 'Kated' && $type !== 'Ústav') {
+                    $rowsNotDepartment++;
+                    continue;
+                }
                 if ($parentFilter !== null && $parentOrgUnit !== $parentFilter) {
+                    $rowsFiltered++;
                     continue;
                 }
 
@@ -92,7 +104,12 @@ class ImportKatedraCommand extends AbstractImportCommand {
                 $insertDepartment->bindValue('code', $code);
                 $insertDepartment->bindValue('name', $name);
                 $insertDepartment->bindValue('homepage', $homepage);
-                $insertDepartment->execute();
+                if ($insertDepartment->execute()) {
+                    $rowsSuccess++;
+                }
+                else {
+                    $rowsFailed++;
+                }
 
             }
         } catch (Exception $e) {
@@ -102,6 +119,9 @@ class ImportKatedraCommand extends AbstractImportCommand {
 
         $conn->commit();
         fclose($file);
+
+        $output->writeln("Processed ".$rows." rows.");
+        $output->writeln("Successful rows: ".$rowsSuccess.", non-department rows skipped: ".$rowsNotDepartment.", filtered rows: ".$rowsFiltered.", failed rows: ".$rowsFailed);
     }
 
 }
