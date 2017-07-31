@@ -12,13 +12,13 @@ Ak študujete na inej fakulte, pozrite sa do <a href="https://anketa.uniba.sk/">
 <p>
 Ak si myslíte, že vám má táto anketa dovoliť hlasovať, napíšte nám na adresu
 <a href="mailto:fmfi-anketa-users@googlegroups.com">fmfi-anketa-users@googlegroups.com.</a>
-Prosíme vás, aby ste pribalili nasledujúci zoznam študijných programov a k nim priradených
-fakúlt, ktoré máte evidované v AISe k tomuto semestru:
+Prosíme vás, aby ste pribalili nasledujúci zoznam študijných programov, ktoré máte evidované
+v AISe k tomuto semestru alebo roku.
 </p>
-<h3>Zoznam študijných programov:</h3>
+<h3>Zoznam aktívnych študijných programov:</h3>
 <ul>
     {% for studium in ostatne_studia %}
-        <li> {{ studium.skratka }}:{{ studium.oj }} </li>
+        <li> {{ studium.skratka }} ({{ studium.oj }}) </li>
     {% endfor %}
 </ul>
 </br>

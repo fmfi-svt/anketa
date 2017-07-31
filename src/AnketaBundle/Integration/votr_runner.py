@@ -32,15 +32,16 @@ def main():
             if studium.sp_skratka == 'ZEkP' and not studium.organizacna_jednotka: studium = studium._replace(organizacna_jednotka='PriF')
 
             if fakulta and studium.organizacna_jednotka != fakulta:
-                # Ak je to pre nas relevantne studium, vratime ho
-                # Dolezite pri zistovani chybajucej org. jednotky v AISe
-                if zapisny_list.akademicky_rok in relevantne_roky:
-                    toto_studium = {}
-                    if studium.sp_skratka: toto_studium['skratka'] = studium.sp_skratka
-                    else: toto_studium['skratka'] = "Neznamy program"
-                    if studium.organizacna_jednotka: toto_studium['oj'] = studium.organizacna_jednotka
-                    else: toto_studium['oj'] = "bez fakulty"
-                    subjects.append(toto_studium)
+                for zapisny_list in client.get_zapisne_listy(studium.studium_key):
+                    # Ak je to pre nas relevantne studium, vratime ho
+                    # Dolezite pri zistovani chybajucej org. jednotky v AISe
+                    if zapisny_list.akademicky_rok in relevantne_roky:
+                        toto_studium = {}
+                        if studium.sp_skratka: toto_studium['skratka'] = studium.sp_skratka
+                        else: toto_studium['skratka'] = "Neznamy program"
+                        if studium.organizacna_jednotka: toto_studium['oj'] = studium.organizacna_jednotka
+                        else: toto_studium['oj'] = "bez fakulty"
+                        ostatne_studia.append(toto_studium)
                 continue   # TODO: pouzivat zapisny_list.organizacna_jednotka, ked bude v REST API
 
             for zapisny_list in client.get_zapisne_listy(studium.studium_key):

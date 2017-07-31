@@ -30,7 +30,7 @@ class AbstractVotingController extends Controller {
                     throw new \Exception("Sezona nema nastavene aisSemesters");
             }
             $retriever = $this->get('anketa.ais_retriever');
-            $result = $this->aisRetriever->getResult("Neexistujuci_nazov_fakulty", $semestre);
+            $result = $retriever->getResult("Neexistujuci_nazov_fakulty", $semestre);
 
 
             $rv = $this->render('AnketaBundle:Hlasovanie:novote.html.twig', array('ostatne_studia' => $result['ostatne_studia']));
