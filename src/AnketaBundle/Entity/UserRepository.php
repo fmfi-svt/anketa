@@ -290,7 +290,11 @@ class UserRepository extends EntityRepository {
                    ->createQuery($dql)
                    ->setParameter('season', $season)
                    ->setParameter('user', $user)
-                   ->getSingleResult();
+                   ->getOneOrNullResult();
+        if($department === null) {
+            $department = $user->getDepartment();
+            if ($department === null) throw new \Exception("User ".$user->getLogin()." nema department");
+        }
         return $department;
     }
 
