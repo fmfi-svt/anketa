@@ -37,10 +37,8 @@ def main():
                     # Dolezite pri zistovani chybajucej org. jednotky v AISe
                     if zapisny_list.akademicky_rok in relevantne_roky:
                         toto_studium = {}
-                        if studium.sp_skratka: toto_studium['skratka'] = studium.sp_skratka
-                        else: toto_studium['skratka'] = "Neznamy program"
-                        if studium.organizacna_jednotka: toto_studium['oj'] = studium.organizacna_jednotka
-                        else: toto_studium['oj'] = "bez fakulty"
+                        toto_studium['skratka'] = studium.sp_skratka or "Neznamy program"
+                        toto_studium['oj'] = studium.organizacna_jednotka or "bez fakulty"
                         ostatne_studia.append(toto_studium)
                 continue   # TODO: pouzivat zapisny_list.organizacna_jednotka, ked bude v REST API
 
