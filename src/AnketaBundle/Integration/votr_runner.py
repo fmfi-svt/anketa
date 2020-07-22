@@ -47,6 +47,7 @@ def main():
                 is_student = True
                 for predmet in client.get_hodnotenia(zapisny_list.zapisny_list_key)[0]:
                     if [zapisny_list.akademicky_rok, predmet.semester] not in semestre: continue
+                    if predmet.hodn_znamka == 'U': continue
                     subjects.append(dict(
                         skratka=predmet.skratka,
                         nazov=predmet.nazov,

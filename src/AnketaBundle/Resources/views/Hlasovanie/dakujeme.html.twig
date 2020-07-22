@@ -1,11 +1,11 @@
 {% extends 'AnketaBundle::layout.html.twig' %}
 
 {% block content %}
-{% if app.session.hasFlash('anonymizacia') %}
+{% for flashMessage in app.session.flashbag.get('anonymizacia') %}
     <div class="big-success-flash"><div class="big-success-flash-in">
-        {{ app.session.flash('anonymizacia') }}
+        {{ flashMessage }}
     </div></div>
-{% endif %}
+{% endfor %}
 <h2>{{ trans('hlasovanie.dakujeme.dakujeme') }}</h2>
 <p>
 {{ trans('hlasovanie.dakujeme.dakujeme_za_cas') }}
