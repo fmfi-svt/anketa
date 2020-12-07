@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3851c75616fddced1b33d9c3f5377b9",
+    "content-hash": "3b4fa1af17ad306379e274b3c44e4c76",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1380,10 +1380,10 @@
         },
         {
             "name": "svt/votr",
-            "version": "20190924-dev",
+            "version": "20200816-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fmfi-svt/votr/archive/3e896870cbec94ce274a1ab44ec7a1265c3e28ec.zip"
+                "url": "https://github.com/fmfi-svt/votr/archive/6fa21039926d6841f5a7c350114f486350d17957.zip"
             },
             "type": "library",
             "license": [
