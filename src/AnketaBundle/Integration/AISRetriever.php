@@ -41,6 +41,8 @@ class AISRetriever
             'ais_url' => 'https://ais2.uniba.sk/',
             'rest_cookie' => 'cosign-filter-votr-api.uniba.sk',
             'rest_url' => 'https://votr-api.uniba.sk/',
+            'ais_login_path' => 'ais/loginCosign.do',
+            'ais_logout_path' => 'ais/logoutCosign.do',
         );
 
         $info = $this->loginInfo;
