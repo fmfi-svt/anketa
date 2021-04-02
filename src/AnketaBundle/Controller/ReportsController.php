@@ -127,7 +127,8 @@ class ReportsController extends Controller {
             $users = $userRepository->findUsersWithAnyRole(array('ROLE_DEPARTMENT_REPORT'));
             foreach($users as $user){
                 $depart = $userRepository->getUserDepartment($user, $season);
-                $authorized_people[$depart->getName()][] = $user;
+                if ($depart !== null)
+                    $authorized_people[$depart->getName()][] = $user;
             }
         }
 

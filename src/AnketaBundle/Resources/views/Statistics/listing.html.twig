@@ -27,7 +27,7 @@
         <ul class="category-listing {{ class|default('') }}">
             {% for item_text, item_href in list %}
                 <li><a href="{{ item_href }}">{{ item_text }}</a>
-                {% if authorized_people is defined %}<ul class="authorized_people_hidden">
+                {% if authorized_people is defined and item_text in authorized_people|keys %}<ul class="authorized_people_hidden">
                     {% for person in authorized_people[item_text] %}
                         {% if not loop.last %}
                             <li>{{ person }}</li>

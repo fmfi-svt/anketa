@@ -291,9 +291,9 @@ class UserRepository extends EntityRepository {
                    ->setParameter('season', $season)
                    ->setParameter('user', $user)
                    ->getOneOrNullResult();
+
         if($department === null) {
-            $department = $user->getDepartment();
-            if ($department === null) throw new \Exception("User ".$user->getLogin()." nema department");
+            $department = $user->getDepartment();  // this might be also NULL
         }
         return $department;
     }
