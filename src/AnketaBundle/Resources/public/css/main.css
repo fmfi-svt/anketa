@@ -32,8 +32,12 @@ ul.authorized_people li:last-child:after {
  content: "";
 }
 
-#authorized_people_title {
+#authorized_people_title, #authorized_people_no_department_title {
   display: none;
+}
+
+#authorized_people_no_department_title {
+  margin-top: 10px;
 }
 
 ul.authorized_people  li {

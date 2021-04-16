@@ -184,6 +184,7 @@ reports:
     opravnene_osoby: Authorized persons
     opravnene_osoby_button: Who see reports?
     opravnene_osoby_nadpis: People who see all reports:
+    opravnene_osoby_bez_departmentu_nadpis: People, who are not assigned to department:
 
 response:
   delete:

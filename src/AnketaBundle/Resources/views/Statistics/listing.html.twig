@@ -12,13 +12,19 @@
         <input type="button" name="authorized_people" id="authorized_people_checkbox" value="{{ authorizedPeopleToggleButton }}"/>
         <h3 id="authorized_people_title">{{ authorizedPeopleTitle }}</h3>
         <ul class="authorized_people_hidden">
-        {% for person in authorized_people['ROLE_ALL_REPORTS'] %}
-            {% if not loop.last %}
-                <li>{{ person }}</li>
-            {% else %}
-                <li>{{ person }}</li>
-            {% endif %}
-        {% endfor %}</ul>
+          {% for person in authorized_people['ROLE_ALL_REPORTS'] %}
+              <li>{{ person }}</li>
+          {% endfor %}
+        </ul>
+
+        {% if authorized_people_no_department is defined %}
+            <h4 id="authorized_people_no_department_title">{{ authorizedPeopleNoDepartmentTitle }}</h4>
+            <ul class="authorized_people_hidden">
+                {% for person in authorized_people_no_department %}
+                    <li>{{ person }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     {% endif %}
     {% for category_title, list in items %}
         {% if category_title is not empty %}
