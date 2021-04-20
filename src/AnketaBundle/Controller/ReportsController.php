@@ -109,6 +109,7 @@ class ReportsController extends Controller {
 
         $items = array();
         $authorized_people = array();
+        $authorized_people_no_department = array();
 
         $departments = $access->getDepartmentReports($season);
         $departmentRepository = $em->getRepository('AnketaBundle:Department');
@@ -127,7 +128,10 @@ class ReportsController extends Controller {
             $users = $userRepository->findUsersWithAnyRole(array('ROLE_DEPARTMENT_REPORT'));
             foreach($users as $user){
                 $depart = $userRepository->getUserDepartment($user, $season);
-                $authorized_people[$depart->getName()][] = $user;
+                if ($depart !== null)
+                    $authorized_people[$depart->getName()][] = $user;
+                else
+                    $authorized_people_no_department[] = $user;
             }
         }
 
@@ -156,11 +160,14 @@ class ReportsController extends Controller {
         $templateParams = array();
         $templateParams['authorizedPeopleToggleButton'] = $this->get('translator')->trans('reports.controller.opravnene_osoby_button');
         $templateParams['authorizedPeopleTitle'] = $this->get('translator')->trans('reports.controller.opravnene_osoby_nadpis');
+        $templateParams['authorizedPeopleNoDepartmentTitle'] = $this->get('translator')->trans('reports.controller.opravnene_osoby_bez_departmentu_nadpis');
         $templateParams['title'] = $this->get('translator')->trans('reports.controller.moje_reporty');
         $templateParams['activeMenuItems'] = array($season->getId(), 'my_reports');
         $templateParams['items'] = $items;
-        if($access->hasAllReports())
+        if($access->hasAllReports()) {
             $templateParams['authorized_people'] = $authorized_people;
+            $templateParams['authorized_people_no_department'] = $authorized_people_no_department;
+        }
         return $this->render('AnketaBundle:Statistics:listing.html.twig', $templateParams);
     }
 }

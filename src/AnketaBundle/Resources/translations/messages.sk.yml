@@ -186,6 +186,7 @@ reports:
     opravnene_osoby: Autorizované osoby
     opravnene_osoby_button: Kto vidí reporty?
     opravnene_osoby_nadpis: Ľudia, ktorí vidia všetky reporty:
+    opravnene_osoby_bez_departmentu_nadpis: Ľudia, ktorí nemajú katedru:
 
 response:
   delete:
