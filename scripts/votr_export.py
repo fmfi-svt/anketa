@@ -109,7 +109,7 @@ def export_ucitel_predmet(args):
     ]
     response = spusti_report(client, app, 'nR0/XST/11', 'XUNIBA03', parametre, 'html')
 
-    response.encoding = 'cp1250'
+    response.encoding = 'utf8'  # was 'cp1250' before
     html_to_csv(client, response.text, output_filename)
 
 
@@ -129,7 +129,7 @@ def export_pocet_studentov(args):
     ]
     response = spusti_report(client, app, 'nR0/XRH/5', 'XZAPSTU', parametre, 'tbl')
 
-    response.encoding = 'cp1250'
+    response.encoding = 'utf8'  # was 'cp1250' before
     with open(output_filename, 'w', encoding='utf8') as f:
         f.write(response.text)
 
