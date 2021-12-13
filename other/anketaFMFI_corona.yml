@@ -236,46 +236,39 @@ otazky:
             hodnota:  0
       position:   7
 
-    - text:  Pokračoval predmet dištančnou formou po vyhlásení mimoriadneho stavu?
-      text_en:  Did the class continue in the form of distance education after the university closed?
-      popis:
-      popis_en:
+    - text: Vyhovoval Ti spôsob, akým bola na tomto predmete zavedená dištančná výučba?
+      text_en: Did the form of distance education portion of the course work for you?
+      popis: Ak bol predmet dištančnou formou (prípande čiastočne), ako hodnotíš formu a priebeh dištančnej výučby, prístup učiteľov a cvičiacich, a pod.
+      popis_en: If the course was fully or partially held in the on-line form, how would you rate the form and implementation of the distance education components?
       kategoria:  predmety
       komentar:   No
       hviezdicky: No
       moznosti:
-          - text: Áno.
-            text_en: Yes.
+          - text: Bez problémov.
+            text_en: Well managed.
             hodnota: 2
-          - text: Prevažne.
-            text_en: Mostly.
+          - text: Skôr dobre zvládnuté.
+            text_en: Rather well managed.
             hodnota: 1
-          - text: Obmedzene.
-            text_en: In a limited way.
+          - text: Skôr zle zvládnuté.
+            text_en: Rather poorly managed.
             hodnota: -1
-          - text: Nie.
-            text_en: No.
+          - text: Zle zvládnuté.
+            text_en: Poorly managed.
             hodnota: -2
-      position:   8
+          - text: Predmet bol po celú dobu prezenčný.
+            text_en: There were no on-line components.
+            hodnota: 0
+      position: 8
 
-    - text:   Vyhovoval Ti spôsob, akým bola na tomto predmete zavedená dištančná výučba, prístup učiteľov a cvičiacich, a pod.? Boli podmienky hodnotenia a absolvovania predmetu zmysluplne upravené vzhľadom na možnosti dištančného štúdia?
-      text_en:  Did the form and lecturer's approach to the distance education satisfy your learning needs in this class? Was the form of evaluation properly adjusted to the distance form? 
-      popis: 
-      popis_en: 
+    - text:   Sem napíš slovné vyjadrenie k tomuto predmetu.
+      text_en: You can include additional comments here.
+      popis: Zdôvodni, prípadne doplň svoje hodnotenie vyššie - či už pozitívne, alebo negatívne.
+      popis_en: For example, you can add explanations to your course rankings (both positive and negative).
       kategoria:  predmety
       komentar:   Yes
       hviezdicky: No
       position:   9
-
-    - text:   Napíšte Váš názor na tento predmet. 
-      text_en: State your opinion on this course.
-      popis: >
-        Popíšte, čo by ste navrhli zmeniť v organizácii a obsahu tohto predmetu. Ktorá časť výučby nebola dostatočne pokrytá vhodným študijným materiálom. Môžete uviesť, prečo by ste ho odporúčali/neodporúčali ďalším študentom. K osobnostiam jednotlivých učiteľov sa vyjadrujte výhradne v otázkach venovaných konkrétnym učiteľom.
-      popis_en: What would you change in the organisation and content of this course? Which parts of the course were not properly covered by study materials? Please justify why you do or do not recommend the course. If you have comments regarding individual teachers, please use the space provided for that purpose in questions regarding those teachers.
-      kategoria:  predmety
-      komentar:   Yes
-      hviezdicky: No
-      position:   10
 
 # otazky ku kombinacii predmet-ucitel
     - text:   Celkové hodnotenie vyučujúceho v tomto predmete.
