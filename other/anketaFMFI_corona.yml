@@ -76,10 +76,10 @@ otazky:
       hviezdicky: Yes
       position:   3
 
-    - text:   Ovplyvnilo Tvoje štúdium zavedenie mimoriadnych opatrení v súvislosti s pandémiou COVID-19?
-      text_en: Were you studies affected by the restrictions introduced in connection with COVID-19 pandemy?
-      popis:  Ako bolo podľa Teba zavedenie dištančnej výučby celkovo zvládnuté v tomto študijnom programe?
-      popis_en:  Was the introduction of distance education successful in the context of this study program?
+    - text:   Ak si už absolvoval/a štátne skúšky, ako ich hodnotíš?
+      text_en: If you passed state exams, how do you rate them?
+      popis:  Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Vyhovovala ti forma, akou prebehli?
+      popis_en:  What do you want to praise, and what do you think could be improved? Was the form of these exams suitable for you?
       kategoria:  studijnyprogram
       komentar:   Yes
       hviezdicky: No
@@ -130,7 +130,7 @@ otazky:
             hodnota: -2
       position:   2
 
-    - text:   Bol obsah predmetu pre Vás zaujímavý?
+    - text:   Bol obsah predmetu pre Teba zaujímavý?
       text_en: Was the course interesting to you?
       popis:
       popis_en:
@@ -166,7 +166,7 @@ otazky:
 
     - text:   Koľko hodín práce si v priemere týždenne venoval tomuto predmetu?
       text_en: How much time did you spend on this course every week on average?
-      popis: Započítavajte čas strávený na prednáškach, cvičeniach, domácich úlohách a prípravu na zápočty a skúšky.
+      popis: Započítaj čas strávený na prednáškach, cvičeniach, domácich úlohách a prípravu na písomky a skúšky.
       popis_en: Include time spent on lectures, exercises, homeworks, and the time spent while preparing for midterms and exams.
       kategoria:  predmety
       komentar:   No
@@ -211,7 +211,7 @@ otazky:
             hodnota: -2
       position:   6
 
-    - text:   Zhruba akú časť kontaktnej výučby (prednášky, on-line prednášky, cvičenia a pod.) si absolvoval?
+    - text:   Zhruba akú časť kontaktnej výučby (prednášky, on-line prednášky, cvičenia a pod.) si absolvoval/a?
       text_en: Approximately what proportion of the in-class teaching (lectures, on-line lectures, tutorials, etc..) have you attended?
       popis:
       popis_en:
@@ -236,10 +236,10 @@ otazky:
             hodnota:  0
       position:   7
 
-    - text: Vyhovoval Ti spôsob, akým bola na tomto predmete zavedená dištančná výučba?
+    - text: Pokiaľ bol predmet čiastočne vyučovaný dištančne, ako bola dištančná výučba zvládnutá?
       text_en: Did the form of distance education portion of the course work for you?
-      popis: Ak bol predmet dištančnou formou (prípande čiastočne), ako hodnotíš formu a priebeh dištančnej výučby, prístup učiteľov a cvičiacich, a pod.
-      popis_en: If the course was fully or partially held in the on-line form, how would you rate the form and implementation of the distance education components?
+      popis: Ak bol predmet dištančnou formou (prípande čiastočne), ako hodnotíš formu a priebeh dištančnej výučbu, prístup učiteľov a cvičiacich, a pod.
+      popis_en: If the course was fully or partially held in the online form, how would you rate the form and implementation of the distance education components?
       kategoria:  predmety
       komentar:   No
       hviezdicky: No
@@ -316,7 +316,7 @@ otazky:
 # vseobecne otazky - fakulta
     - text:   Aký je Tvoj celkový dojem z  priestorov fakulty a ďalších súčastí univerzity?
       text_en:  What is your impression of the faculty and university premises? 
-      popis:  Jedná sa napr. o vybavenie prednáškových, počítačových a laboratórnych miestností, voľnočasových priestorov pre študentov, atď.
+      popis: Teda napr. vybavenie prednáškových, počítačových a laboratórnych miestností, voľnočasových priestorov pre študentov, atď.
       popis_en: This includes for example lecture rooms, computer rooms, labs, student lounges, etc.
       kategoria:  fakulta
       komentar:   Yes
@@ -325,7 +325,7 @@ otazky:
       
     - text:   Ako hodnotíš služby poskytované priamo fakultou?
       text_en:  How do you rate services provided by the faculty?
-      popis:  Jedná sa napr. o garantov a tútorov študijných programov, fakultnú knižnicu, rozvrh, študijné oddelenie, referát doktorandského štúdia, atď.
+      popis: Teda napr. garantov a tútorov študijných programov, fakultnú knižnicu, rozvrh, študijné oddelenie, referát doktorandského štúdia, atď.)
       popis_en: This includes for example services of study program directors and tutors, library, schedules, registrar's office, etc.
       kategoria:  fakulta
       komentar:   Yes
@@ -350,6 +350,34 @@ otazky:
       komentar:   Yes
       hviezdicky: Yes
       position:   4
+      
+    - text: Zúčastnil/a si sa Študentskej vedeckej konferencie (ŠVK)?
+      text_en: Did you attend the Student Science Conference (ŠVK)?
+      popis:
+      popis_en:
+      kategoria:  fakulta
+      komentar:   No
+      hviezdicky: No
+      moznosti:
+          - text: Áno, ako súťažiaci/a.
+            text_en: Yes, as a competitor.
+            hodnota: 1
+          - text: Áno, ale iba som sa bol/a pozrieť, nesúťažil/a som. 
+            text_en: "Yes, but I just came to see the presentations, I didn't compete."
+            hodnota: 0
+          - text: Nie.
+            text_en: No.
+            hodnota: -1
+      position: 5
+
+    - text: Ak si na ŠVK bol/a, čo sa ti na nej páčilo a čo nepáčilo? Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Ak si nebol/a, prečo?
+      text_en: "If you attended the Student Science Conference (ŠVK), what did you like about it, and what did you not like? What do you want to praise, and what do you think could be improved? If you didn't attend, why?"
+      popis:  
+      popis_en: 
+      kategoria:  fakulta
+      komentar:   Yes
+      hviezdicky: No
+      position:   6
 
     - text: Ako hodnotíš študentskú anketu?
       text_en: How do you rate this student questionnaire?
@@ -358,14 +386,14 @@ otazky:
       kategoria:  fakulta
       komentar:   Yes
       hviezdicky: Yes
-      position:   5
+      position:   7
 
-    - text: Ak sa chceš vyjadriť k čomukoľvek ďalšiemu, napíš to sem.
+    - text: Ak sa chceš vyjadriť k čomukoľvek ďalšiemu, napíš to, prosím, sem.
       text_en: If you have any further comments, please write them here.
       popis:
       popis_en: 
       kategoria:  fakulta
       komentar:   Yes
       hviezdicky: No
-      position:   6
+      position:   8
 ...
