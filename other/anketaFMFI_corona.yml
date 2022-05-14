@@ -241,24 +241,8 @@ otazky:
       popis: Ak bol predmet dištančnou formou (prípande čiastočne), ako hodnotíš formu a priebeh dištančnej výučbu, prístup učiteľov a cvičiacich, a pod.
       popis_en: If the course was fully or partially held in the online form, how would you rate the form and implementation of the distance education components?
       kategoria:  predmety
-      komentar:   No
+      komentar:   Yes
       hviezdicky: No
-      moznosti:
-          - text: Bez problémov.
-            text_en: Well managed.
-            hodnota: 2
-          - text: Skôr dobre zvládnuté.
-            text_en: Rather well managed.
-            hodnota: 1
-          - text: Skôr zle zvládnuté.
-            text_en: Rather poorly managed.
-            hodnota: -1
-          - text: Zle zvládnuté.
-            text_en: Poorly managed.
-            hodnota: -2
-          - text: Predmet bol po celú dobu prezenčný.
-            text_en: There were no on-line components.
-            hodnota: 0
       position: 8
 
     - text:   Sem napíš slovné vyjadrenie k tomuto predmetu.
