@@ -325,7 +325,7 @@ otazky:
       
     - text:   Ako hodnotíš služby poskytované priamo fakultou?
       text_en:  How do you rate services provided by the faculty?
-      popis: Teda napr. garantov a tútorov študijných programov, fakultnú knižnicu, rozvrh, študijné oddelenie, referát doktorandského štúdia, atď.)
+      popis: Teda napr. garantov a tútorov študijných programov, fakultnú knižnicu, rozvrh, študijné oddelenie, referát doktorandského štúdia, atď.
       popis_en: This includes for example services of study program directors and tutors, library, schedules, registrar's office, etc.
       kategoria:  fakulta
       komentar:   Yes
