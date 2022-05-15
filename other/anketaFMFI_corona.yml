@@ -238,7 +238,7 @@ otazky:
 
     - text: Pokiaľ bol predmet čiastočne vyučovaný dištančne, ako bola dištančná výučba zvládnutá?
       text_en: Did the form of distance education portion of the course work for you?
-      popis: Ak bol predmet dištančnou formou (prípande čiastočne), ako hodnotíš formu a priebeh dištančnej výučbu, prístup učiteľov a cvičiacich, a pod.
+      popis: Ak bol predmet dištančnou formou (prípande čiastočne), ako hodnotíš formu a priebeh dištančnej výučby, prístup učiteľov a cvičiacich, a pod.
       popis_en: If the course was fully or partially held in the online form, how would you rate the form and implementation of the distance education components?
       kategoria:  predmety
       komentar:   Yes
