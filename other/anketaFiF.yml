@@ -175,8 +175,8 @@ otazky:
             hodnota: -2
       position:   5
 
-    - text:   Zhruba akú časť kontaktnej výučby (prednášky, cvičenia a pod.) ste absolvovali?
-      text_en: Approximately what proportion of the in-class teaching (lectures, tutorials, etc..) have you attended?
+    - text:   Zhruba akú časť výučby (kontaktnej a dištančnej) ste absolvovali?
+      text_en: Approximately what proportion of teaching (in-class and online) have you attended?
       popis:
       popis_en:
       kategoria:  predmety
@@ -296,15 +296,6 @@ otazky:
       hviezdicky: Yes
       position:   2
 
-    - text:   Vybavenosť učební a celkové podmienky na výučbu.
-      text_en: Quality of teaching facilities and overall teaching conditions.
-      popis:
-      popis_en:
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: Yes
-      position:   3
-
     - text:   Vybavenosť knižnice a prístup pracovníkov knižnice ku študentom.
       text_en: Quality of the library and attitude of library staff towards students.
       popis:
@@ -321,7 +312,7 @@ otazky:
             text_en: Unsatisfactory
           - text: Nevyužívam tieto služby
             text_en: I'm not using the service
-      position:   4
+      position:   3
 
     - text:   Činnosť Študentskej časti Akademického senátu FiF UK (ŠČ AS FiF UK).
       text_en: Activities of the Student section of the Faculty Council (ŠČ AS FiF UK).
@@ -339,7 +330,7 @@ otazky:
             text_en: Unsatisfactory
           - text: Nepoznám ich prácu
             text_en: I'm not familiar with their work
-      position:   5
+      position:   4
 
     - text:   Študentská anketa.
       text_en:  Student questionnaire.
@@ -349,16 +340,7 @@ otazky:
       kategoria:  fakulta
       komentar:   Yes
       hviezdicky: Yes
-      position:   6
-
-    - text:   Čo by sme mali urobiť pre to, aby študenti venovali viac času prednáškam a tvorivým aktivitám na fakulte?
-      text_en: What should we do to ensure that the students devote more time to lectures and creative activities at the faculty?
-      popis:
-      popis_en:
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: No
-      position:   7
+      position:   5
 
 # vseobecne otazky - ostatne
     - text:   Chcete sa ešte k niečomu vyjadriť?
