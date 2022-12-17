@@ -75,11 +75,11 @@ otazky:
       komentar:   No
       hviezdicky: Yes
       position:   3
-
-    - text:   Ak si už absolvoval/a štátne skúšky, ako ich hodnotíš?
-      text_en: If you passed state exams, how do you rate them?
-      popis:  Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Vyhovovala ti forma, akou prebehli?
-      popis_en:  What do you want to praise, and what do you think could be improved? Was the form of these exams suitable for you?
+      
+    - text:    Ako hodnotíš pôsobenie garanta a tútora(ov) študijného programu?
+      text_en: How do you evaluate the director and tutor(s) of the study program?
+      popis:
+      popis_en:
       kategoria:  studijnyprogram
       komentar:   Yes
       hviezdicky: No
@@ -181,6 +181,9 @@ otazky:
           - text: Štyri hodiny.
             text_en: Four hours.
             hodnota: 4
+          - text: Šesť hodín.
+            text_en: Six hours.
+            hodnota: 6
           - text: Osem hodín.
             text_en: Eight hours.
             hodnota: 8
@@ -334,34 +337,6 @@ otazky:
       komentar:   Yes
       hviezdicky: Yes
       position:   4
-      
-    - text: Zúčastnil/a si sa Študentskej vedeckej konferencie (ŠVK)?
-      text_en: Did you attend the Student Science Conference (ŠVK)?
-      popis:
-      popis_en:
-      kategoria:  fakulta
-      komentar:   No
-      hviezdicky: No
-      moznosti:
-          - text: Áno, ako súťažiaci/a.
-            text_en: Yes, as a competitor.
-            hodnota: 1
-          - text: Áno, ale iba som sa bol/a pozrieť, nesúťažil/a som. 
-            text_en: "Yes, but I just came to see the presentations, I didn't compete."
-            hodnota: 0
-          - text: Nie.
-            text_en: No.
-            hodnota: -1
-      position: 5
-
-    - text: Ak si na ŠVK bol/a, čo sa ti na nej páčilo a čo nepáčilo? Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Ak si nebol/a, prečo?
-      text_en: "If you attended the Student Science Conference (ŠVK), what did you like about it, and what did you not like? What do you want to praise, and what do you think could be improved? If you didn't attend, why?"
-      popis:  
-      popis_en: 
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: No
-      position:   6
 
     - text: Ako hodnotíš študentskú anketu?
       text_en: How do you rate this student questionnaire?
@@ -370,7 +345,7 @@ otazky:
       kategoria:  fakulta
       komentar:   Yes
       hviezdicky: Yes
-      position:   7
+      position:   5
 
     - text: Ak sa chceš vyjadriť k čomukoľvek ďalšiemu, napíš to, prosím, sem.
       text_en: If you have any further comments, please write them here.
@@ -379,5 +354,5 @@ otazky:
       kategoria:  fakulta
       komentar:   Yes
       hviezdicky: No
-      position:   8
+      position:   6
 ...
