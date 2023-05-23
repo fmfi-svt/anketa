@@ -34,4 +34,16 @@ class ApiController extends Controller {
         return new Response(json_encode($averages));
     }
 
+    public function ratingsAction() {
+        $request = $this->get('request');
+        $user = $this->get('anketa.access.statistics')->getUser();
+        if ($request->getMethod() != 'POST' && $user === null) {
+            throw new \BadMethodCallException('Not authorized');
+        }
+        $em = $this->get('doctrine.orm.entity_manager');
+        $data = $em->getRepository('AnketaBundle:Answer')
+                   ->getSubjectsRatings();
+        return new Response(json_encode($data));
+    }
+
 }
