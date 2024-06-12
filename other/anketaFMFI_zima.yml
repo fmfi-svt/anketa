@@ -81,8 +81,8 @@ otazky:
     #   popis:   Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Vyhovovala Ti forma, akou prebehli?
     #   popis_en:  What do you want to praise and what do you think could be improved? Did you like the way they went?
     #   kategoria:  studijnyprogram
-    #   komentar:   No
-    #   hviezdicky: Yes
+    #   komentar:   Yes
+    #   hviezdicky: No
     #   position:   4
       
     - text: Aký bol Tvoj obľúbený predmet(y) v tomto semestri a prečo?
