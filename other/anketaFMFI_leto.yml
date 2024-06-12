@@ -76,17 +76,17 @@ otazky:
       hviezdicky: Yes
       position:   3
 
-    # - text:   Ak si už absolvoval/a štátne skúšky, ako ich hodnotíš?
-    #   text_en: If you have already passed state exams, how do you rate them?
-    #   popis:   Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Vyhovovala Ti forma, akou prebehli?
-    #   popis_en:  What do you want to praise and what do you think could be improved? Did you like the way they went?
-    #   kategoria:  studijnyprogram
-    #   komentar:   No
-    #   hviezdicky: Yes
-    #   position:   4
+    - text:   Ak si už absolvoval/a štátne skúšky, ako ich hodnotíš?
+      text_en: If you have already passed state exams, how do you rate them?
+      popis:   Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Vyhovovala Ti forma, akou prebehli?
+      popis_en:  What do you want to praise and what do you think could be improved? Did you like the way they went?
+      kategoria:  studijnyprogram
+      komentar:   No
+      hviezdicky: Yes
+      position:   4
       
-    - text: Aký bol Tvoj obľúbený predmet(y) v tomto semestri?
-      text_en: What was your favourite course(s) this semester?
+    - text: Aký bol Tvoj obľúbený predmet(y) v tomto semestri a prečo?
+      text_en: What was your favourite course(s) this semester and why?
       popis:
       popis_en:
       kategoria:  studijnyprogram
@@ -346,33 +346,33 @@ otazky:
       hviezdicky: No
       position:   4
       
-    # - text: Zúčastnil/a si sa Študentskej vedeckej konferencie (ŠVK)?
-    #   text_en: Did you attend the Student Science Conference (ŠVK)?
-    #   popis:
-    #   popis_en:
-    #   kategoria:  fakulta
-    #   komentar:   No
-    #   hviezdicky: No
-    #   moznosti:
-    #       - text: Áno, ako súťažiaci/a.
-    #         text_en: Yes, as a competitor.
-    #         hodnota: 1
-    #       - text: Áno, ale iba som sa bol/a pozrieť, nesúťažil/a som. 
-    #         text_en: "Yes, but I just came to see the presentations, I didn't compete."
-    #         hodnota: 0
-    #       - text: Nie.
-    #         text_en: No.
-    #         hodnota: -1
-    #   position: 5
+    - text: Zúčastnil/a si sa Študentskej vedeckej konferencie (ŠVK)?
+      text_en: Did you attend the Student Science Conference (ŠVK)?
+      popis:
+      popis_en:
+      kategoria:  fakulta
+      komentar:   No
+      hviezdicky: No
+      moznosti:
+          - text: Áno, ako súťažiaci/a.
+            text_en: Yes, as a competitor.
+            hodnota: 1
+          - text: Áno, ale iba som sa bol/a pozrieť, nesúťažil/a som.
+            text_en: "Yes, but I just came to see the presentations, I didn't compete."
+            hodnota: 0
+          - text: Nie.
+            text_en: No.
+            hodnota: -1
+      position: 5
 
-    # - text: Ak si na ŠVK bol/a, čo sa Ti na nej páčilo a čo nepáčilo? Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Ak si nebol/a, prečo?
-    #   text_en: "If you attended the Student Science Conference (ŠVK), what did you like about it, and what did you not like? What do you want to praise, and what do you think could be improved? If you didn't attend, why?"
-    #   popis:  
-    #   popis_en: 
-    #   kategoria:  fakulta
-    #   komentar:   Yes
-    #   hviezdicky: No
-    #   position:   6
+    - text: Ak si na ŠVK bol/a, čo sa Ti na nej páčilo a čo nepáčilo? Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Ak si nebol/a, prečo?
+      text_en: "If you attended the Student Science Conference (ŠVK), what did you like about it, and what did you not like? What do you want to praise, and what do you think could be improved? If you didn't attend, why?"
+      popis:
+      popis_en:
+      kategoria:  fakulta
+      komentar:   Yes
+      hviezdicky: No
+      position:   6
 
     - text: Ako hodnotíš študentskú anketu?
       text_en: How do you rate this student survey?
