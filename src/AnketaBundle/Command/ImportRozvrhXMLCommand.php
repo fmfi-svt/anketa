@@ -59,6 +59,10 @@ class ImportRozvrhXMLCommand extends AbstractImportCommand {
             'KTFDF' => 'FMFI.KTFDF',
             'KZVI' => 'FMFI.KZVI',
             'KTVS' => 'FMFI.KTV',
+            'KTF' => 'FMFI.KTF',
+            'KAG' => 'FMFI.KAG',
+            'KAG' => 'FMFI.KAG',
+            'KDMFI' => 'FMFI.KDMFI',
         );
         
         $subjectIdentification = $this->getContainer()->get('anketa.subject_identification');
