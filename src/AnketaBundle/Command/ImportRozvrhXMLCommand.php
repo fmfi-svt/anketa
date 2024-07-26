@@ -61,7 +61,6 @@ class ImportRozvrhXMLCommand extends AbstractImportCommand {
             'KTVS' => 'FMFI.KTV',
             'KTF' => 'FMFI.KTF',
             'KAG' => 'FMFI.KAG',
-            'KAG' => 'FMFI.KAG',
             'KDMFI' => 'FMFI.KDMFI',
         );
         
