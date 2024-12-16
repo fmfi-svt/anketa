@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b4fa1af17ad306379e274b3c44e4c76",
+    "content-hash": "873b8948ef2fabeeb1ce7ee1254fcc62",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -942,12 +942,12 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Assetic": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-0": {
+                    "Assetic": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1237,6 +1237,7 @@
                 "configuration",
                 "distribution"
             ],
+            "abandoned": true,
             "time": "2015-06-05T22:32:08+00:00"
         },
         {
@@ -1286,6 +1287,7 @@
                 "annotations",
                 "controllers"
             ],
+            "abandoned": "Symfony",
             "time": "2013-07-24T08:49:53+00:00"
         },
         {
@@ -1336,6 +1338,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
+            "abandoned": "symfony/maker-bundle",
             "time": "2014-04-28T14:01:06+00:00"
         },
         {
@@ -1380,10 +1383,10 @@
         },
         {
             "name": "svt/votr",
-            "version": "20200816-dev",
+            "version": "20241216-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fmfi-svt/votr/archive/6fa21039926d6841f5a7c350114f486350d17957.zip"
+                "url": "https://github.com/fmfi-svt/votr/archive/059144ba5e64313f80a0575b7071aca0fec779da.zip"
             },
             "type": "library",
             "license": [
@@ -1443,6 +1446,7 @@
                 "mail",
                 "mailer"
             ],
+            "abandoned": "symfony/mailer",
             "time": "2018-01-23T07:37:21+00:00"
         },
         {
@@ -1591,12 +1595,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Apcu\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Apcu\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1650,12 +1654,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1737,6 +1741,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
+            "abandoned": "symfony/mailer",
             "time": "2017-05-22T05:03:21+00:00"
         },
         {
@@ -1820,15 +1825,15 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "src/Symfony/Component/Intl/Resources/stubs/functions.php"
+                ],
                 "psr-0": {
                     "Symfony\\": "src/"
                 },
                 "classmap": [
                     "src/Symfony/Component/HttpFoundation/Resources/stubs",
                     "src/Symfony/Component/Intl/Resources/stubs"
-                ],
-                "files": [
-                    "src/Symfony/Component/Intl/Resources/stubs/functions.php"
                 ],
                 "exclude-from-classmap": [
                     "**/Tests/"
@@ -1900,6 +1905,7 @@
                 "i18n",
                 "text"
             ],
+            "abandoned": true,
             "time": "2013-10-18T19:37:15+00:00"
         },
         {

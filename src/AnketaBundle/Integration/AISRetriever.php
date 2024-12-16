@@ -36,35 +36,29 @@ class AISRetriever
 
     private function getConnectionData() {
         $server = array(
-            'login_types' => array('cosignproxy', 'cosigncookie'),
-            'ais_cookie' => 'cosign-filter-ais2.uniba.sk',
+            'login_types' => array('saml_andrvotr', 'cookie'),
+            'ais_cookie' => 'JSESSIONID',
             'ais_url' => 'https://ais2.uniba.sk/',
-            'rest_cookie' => 'cosign-filter-votr-api.uniba.sk',
+            'rest_cookie' => 'JSESSIONID',
             'rest_url' => 'https://votr-api.uniba.sk/',
-            'ais_login_path' => 'ais/loginCosign.do',
-            'ais_logout_path' => 'ais/logoutCosign.do',
         );
 
         $info = $this->loginInfo;
 
-        if (!empty($info['cosign_proxy'])) {
-            if (empty($_SERVER['COSIGN_SERVICE'])) {
-                throw new \Exception("COSIGN_SERVICE is not set");
+        if (!empty($info['my_entity_id']) && !empty($info['andrvotr_api_key'])) {
+            if (empty($_SERVER['ANDRVOTR_AUTHORITY_TOKEN'])) {
+                throw new \Exception("ANDRVOTR_AUTHORITY_TOKEN is not set");
             }
-            $name = $_SERVER['COSIGN_SERVICE'];
-            $php_name = strtr($name, '.', '_');
-            $value = $_COOKIE[$php_name];
-            $value = strtr($value, ' ', '+');
-
             $params = array(
-                'type' => 'cosignproxy',
-                'cosign_proxy' => $info['cosign_proxy'],
-                'cosign_service' => array($name, $value),
+                'type' => 'saml_andrvotr',
+                'my_entity_id' => $info['my_entity_id'],
+                'andrvotr_api_key' => $info['andrvotr_api_key'],
+                'andrvotr_authority_token' => $_SERVER['ANDRVOTR_AUTHORITY_TOKEN'],
             );
-        } else if (!empty($info['cosign_cookie'])) {
+        } else if (!empty($info['ais_cookie'])) {
             $params = array(
-                'type' => 'cosigncookie',
-                'ais_cookie' => $info['cosign_cookie'],
+                'type' => 'cookie',
+                'ais_cookie' => $info['ais_cookie'],
             );
 
             if (!empty($info['rest_cookie'])) {
@@ -74,7 +68,7 @@ class AISRetriever
                 unset($server['rest_url']);
             }
         } else {
-            throw new \Exception("Neither cosign_proxy nor cosign_cookie is present");
+            throw new \Exception("Neither my_entity_id+andrvotr_api_key nor ais_cookie is present");
         }
 
         return array(
@@ -84,7 +78,7 @@ class AISRetriever
     }
 
     private function runVotr($input) {
-        $pythonPath = __DIR__ . '/../../../vendor/svt/votr/venv/bin/python';
+        $pythonPath = __DIR__ . '/../../../vendor/svt/votr/.venv/bin/python';
         $runnerPath = __DIR__ . '/votr_runner.py';
 
         $pb = new ProcessBuilder(array($pythonPath, $runnerPath));

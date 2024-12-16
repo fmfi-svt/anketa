@@ -5,18 +5,20 @@ import sys
 import json
 import csv
 
-from bs4 import BeautifulSoup
 from aisikl.app import Application, assert_ops
 from fladgejt.login import create_client
 from fladgejt.helpers import find_option, find_row
-from console import settings
 
 
 def prihlas_sa():
     username = os.environ['AIS_USERNAME']
     password = os.environ['AIS_PASSWORD']
-    client = create_client(settings.servers[0], dict(type='cosignpassword', username=username, password=password))
-    if os.environ.get('AIS_VERBOSE'): client.context.print_logs = True
+    if os.environ.get('AIS_VERBOSE'):
+        import aisikl.context
+        aisikl.context.print_logs = True
+    server = dict(login_types=('saml_password',), ais_url='https://ais2.uniba.sk/')
+    params = dict(type='saml_password', username=username, password=password)
+    client = create_client(server, params)
     return client
 
 
@@ -79,10 +81,8 @@ def spusti_report(client, app, vrchol_stromu, kod_zostavy, parametre, vystupny_f
     return response
 
 
-def html_to_csv(client, text, output_filename):
-    client.context.log('import', 'Parsing exported HTML')
-    soup = BeautifulSoup(text)
-    client.context.log('import', 'Parsed HTML data')
+def html_to_csv(client, response, output_filename):
+    soup = client.context.parse_html(response)
     table = soup.find_all('table')[-1]
     data = []
     for tr in table.find_all('tr', recursive=False):
@@ -110,7 +110,7 @@ def export_ucitel_predmet(args):
     response = spusti_report(client, app, 'nR0/XST/11', 'XUNIBA03', parametre, 'html')
 
     response.encoding = 'utf8'  # was 'cp1250' before
-    html_to_csv(client, response.text, output_filename)
+    html_to_csv(client, response, output_filename)
 
 
 def export_pocet_studentov(args):
@@ -154,7 +154,7 @@ def export_predmet_katedra(args):
     response = app.awaited_shell_exec(ops3)
 
     response.encoding = 'utf8'
-    html_to_csv(client, response.text, output_filename)
+    html_to_csv(client, response, output_filename)
 
 
 commands = {
