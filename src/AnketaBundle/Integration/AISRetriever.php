@@ -39,8 +39,6 @@ class AISRetriever
             'login_types' => array('saml_andrvotr', 'cookie'),
             'ais_cookie' => 'JSESSIONID',
             'ais_url' => 'https://ais2.uniba.sk/',
-            'rest_cookie' => 'JSESSIONID',
-            'rest_url' => 'https://votr-api.uniba.sk/',
         );
 
         $info = $this->loginInfo;
@@ -60,13 +58,6 @@ class AISRetriever
                 'type' => 'cookie',
                 'ais_cookie' => $info['ais_cookie'],
             );
-
-            if (!empty($info['rest_cookie'])) {
-                $params['rest_cookie'] = $info['rest_cookie'];
-            } else {
-                unset($server['rest_cookie']);
-                unset($server['rest_url']);
-            }
         } else {
             throw new \Exception("Neither my_entity_id+andrvotr_api_key nor ais_cookie is present");
         }
