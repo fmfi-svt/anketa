@@ -26,7 +26,8 @@
         "svt/votr": "@dev",
         "svt/rozvrhxml": "@dev",
         "svt/cosign-bundle": "@dev",
-        "ext-json": "*"
+        "ext-json": "*",
+        "phpunit/php-code-coverage": "^2.2"
     },
     "require-dev": {
         "svt/linters": "@dev"

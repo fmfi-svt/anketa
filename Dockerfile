@@ -19,6 +19,8 @@ RUN <<EOF
     # This is needed for setlocale() in Slugifier.php.
     echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
     locale-gen
+    # https://xdebug.org/docs/compat
+    pecl install xdebug-3.1.6
     # Tweak Apache configuration.
     a2enmod rewrite
     sed -ri '/AllowOverride All/ d' /etc/apache2/conf-available/docker-php.conf
@@ -31,6 +33,8 @@ RUN <<EOF
     ' /etc/apache2/sites-available/000-default.conf
     # Tweak PHP configuration. PHP loudly complains if timezone is not set.
     echo '
+        zend_extension = xdebug.so
+        xdebug.mode = coverage
         error_reporting = E_ALL
         date.timezone = Europe/Bratislava
     ' > /usr/local/etc/php/conf.d/custom.ini
