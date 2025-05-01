@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__.'/init_coverage.php';
+
 /**
  * The login form is usually managed by Cosign. This is a fake login form that
  * can be used during development, and presents the same interface to the app.
