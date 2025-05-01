@@ -1,5 +1,5 @@
 FROM php:5.5-apache AS base
-COPY --from=composer/composer:1-bin /composer /usr/local/bin/
+COPY --from=composer/composer:2.2-bin /composer /usr/local/bin/
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/
 # For some reason the image does not come with php.ini, so it defaults to log_errors=Off. :C
 ADD https://github.com/php/php-src/raw/refs/heads/PHP-5.5/php.ini-production /usr/local/etc/php/php.ini

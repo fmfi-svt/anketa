@@ -89,7 +89,7 @@ else
   composerbin=./composer.phar
   if ! [ -e ./composer.phar ]; then
     echo "stahujem composer.phar"
-    curl -fsSL https://getcomposer.org/installer | php -- --1
+    curl -fsSL https://getcomposer.org/installer | php -- --2.2
   fi
 fi
 
