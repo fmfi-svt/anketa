@@ -1,0 +1,7 @@
+# This is just a hypothetical example for now, because anketa production does not use docker.
+# Try with: docker compose -f docker-compose.yml -f docker-compose.prodpokus.yml {build | up -d | down}
+services:
+  web:
+    build:
+      target: prod
+    volumes: !reset []

@@ -1,0 +1,24 @@
+services:
+  web:
+    build:
+      target: dev
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/anketa
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.5
+    # utf8mb4 would be better. This is for bug-for-bug consistency with svt4.
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: anketa
+      MYSQL_USER: anketa
+      MYSQL_PASSWORD: anketa
+      # This sets character_set_client when using the CLI ("docker compose exec db mysql ...").
+      LANG: C.UTF-8
+    volumes:
+      - ./docker_mysql:/var/lib/mysql

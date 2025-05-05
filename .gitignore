@@ -8,6 +8,8 @@
 /vendor/
 /db/
 /composer.phar
+/docker_cache
+/docker_mysql
 
 *~
 .DS_Store
