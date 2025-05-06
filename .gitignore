@@ -4,6 +4,7 @@
 /app/logs/
 /app/bootstrap*
 /app/config/config_local.yml
+/app/phpunit.xml
 /web/bundles/
 /vendor/
 /db/
