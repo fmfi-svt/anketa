@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2096617620fa07a001af6a4db23fa565",
+    "content-hash": "e5f66c84f36a101428578f768be12054",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1659,10 +1659,10 @@
         },
         {
             "name": "svt/votr",
-            "version": "20241216-dev",
+            "version": "20250507-dev",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fmfi-svt/votr/archive/059144ba5e64313f80a0575b7071aca0fec779da.zip"
+                "url": "https://github.com/fmfi-svt/votr/archive/b09065a145a0ab94888c83adabf57bcc076abefe.zip"
             },
             "type": "library",
             "license": [
