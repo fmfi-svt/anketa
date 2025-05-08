@@ -467,7 +467,7 @@ class StatisticsController extends Controller {
         $conn = $em->getConnection();
         $season = $this->getSeason($season_slug);
 
-        $st = $conn->prepare("select date_format(UserSeason.startTimestamp, '%Y-%m-%d') as dates, count(*) as counts from UserSeason where UserSeason.startTimestamp is not NULL and UserSeason.season_id = :season_id group by date_format(dates, '%Y-%m-%d')");
+        $st = $conn->prepare("select date_format(UserSeason.startTimestamp, '%Y-%m-%d') as dates, count(*) as counts from UserSeason where UserSeason.startTimestamp is not NULL and UserSeason.season_id = :season_id group by date_format(UserSeason.startTimestamp, '%Y-%m-%d') order by date_format(UserSeason.startTimestamp, '%Y-%m-%d')");
         $st->bindValue('season_id', $season->getId());
         $st->execute();
 
@@ -484,7 +484,7 @@ class StatisticsController extends Controller {
         $conn = $em->getConnection();
         $season = $this->getSeason($season_slug);
 
-        $st = $conn->prepare("select date_format(UserSeason.finishTimestamp, '%Y-%m-%d') as dates, count(*) as counts from UserSeason where UserSeason.finishTimestamp is not NULL and UserSeason.season_id = :season_id group by date_format(dates, '%Y-%m-%d')");
+        $st = $conn->prepare("select date_format(UserSeason.finishTimestamp, '%Y-%m-%d') as dates, count(*) as counts from UserSeason where UserSeason.finishTimestamp is not NULL and UserSeason.season_id = :season_id group by date_format(UserSeason.finishTimestamp, '%Y-%m-%d') order by date_format(UserSeason.finishTimestamp, '%Y-%m-%d')");
         $st->bindValue('season_id', $season->getId());
         $st->execute();
 
