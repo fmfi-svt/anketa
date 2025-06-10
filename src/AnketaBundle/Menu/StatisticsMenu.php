@@ -81,6 +81,7 @@ class StatisticsMenu
                 if (isset($activeItems[1]) && $activeItems[1] == 'subjects') {
                     $subjectsByCategory = $em->getRepository('AnketaBundle:Subject')->getCategorizedSubjects($season);
                     foreach (array_keys($subjectsByCategory) as $category) {
+                        $category = strval($category);
                         // Add this category under "Subjects".
                         $subjectsItem->children[$category] = $categoryItem = new MenuItem(
                             $category,
