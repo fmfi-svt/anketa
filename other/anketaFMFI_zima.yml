@@ -1,394 +1,392 @@
 ---
 kategorie:
-# kategorie predmetov
-    - id:         predmety
-      popis:      Predmety
-      popis_en:   Courses
-      kategoria:  predmety
+  # kategorie predmetov
+  - id: predmety
+    popis: Predmety
+    popis_en: Courses
+    kategoria: predmety
 
-    - id:         predmety_ucitel
-      popis:      Učitelia k predmetu
-      popis_en:   Course teachers
-      kategoria:  predmety_ucitel
+  - id: predmety_ucitel
+    popis: Učitelia k predmetu
+    popis_en: Course teachers
+    kategoria: predmety_ucitel
 
-# kategorie studijnych programov
-    - id:         studijnyprogram
-      popis:      Studijny program
-      popis_en:   Study program
-      kategoria:  studijnyprogram
+  # kategorie studijnych programov
+  - id: studijnyprogram
+    popis: Studijny program
+    popis_en: Study program
+    kategoria: studijnyprogram
 
-# vseobecne kategorie
-    - id:         fakulta
-      popis:      Fakulta
-      popis_en:   Questions about the faculty
-      kategoria:  vseobecne
-    - id:         erasmus
-      popis:      Program ERASMUS
-      popis_en:   ERASMUS program
-      kategoria:  vseobecne
-    - id:         stravovanie
-      popis:      Bufety
-      popis_en:   Cafeterias
-      kategoria:  vseobecne
+  # vseobecne kategorie
+  - id: fakulta
+    popis: Fakulta
+    popis_en: Questions about the faculty
+    kategoria: vseobecne
+  - id: erasmus
+    popis: Program ERASMUS
+    popis_en: ERASMUS program
+    kategoria: vseobecne
+  - id: stravovanie
+    popis: Bufety
+    popis_en: Cafeterias
+    kategoria: vseobecne
 
 otazky:
-# otazky k studijnemu programu
-    - text: Celkové hodnotenie kvality študijného programu.
-      text_en: Overall assessment of the quality of the study program.
-      popis:
-      popis_en:
-      kategoria:  studijnyprogram
-      komentar:   No
-      hviezdicky: Yes
-      position:   1
+  # otazky k studijnemu programu
+  - text: Celkové hodnotenie kvality študijného programu.
+    text_en: Overall assessment of the quality of the study program.
+    popis:
+    popis_en:
+    kategoria: studijnyprogram
+    komentar: No
+    hviezdicky: Yes
+    position: 1
 
-    - text: Aký náročný je pre Teba študijný program?
-      text_en: How challenging is the study program for you?
-      popis:
-      popis_en:
-      kategoria:  studijnyprogram
-      komentar:   No
-      hviezdicky: No
-      moznosti:
-          - text: Totálny zabijak
-            text_en: Absolute killer
-            hodnota: 2
-          - text: Nadsadený
-            text_en: Too difficult
-            hodnota: 1
-          - text: Akurát
-            text_en: Just right
-            hodnota: 0
-          - text: Nenáročný
-            text_en: Not so difficult
-            hodnota: -1
-          - text: Triviálny
-            text_en: Trivial
-            hodnota: -2
-      position:   2
+  - text: Aký náročný je pre Teba študijný program?
+    text_en: How challenging is the study program for you?
+    popis:
+    popis_en:
+    kategoria: studijnyprogram
+    komentar: No
+    hviezdicky: No
+    moznosti:
+      - text: Totálny zabijak
+        text_en: Absolute killer
+        hodnota: 2
+      - text: Nadsadený
+        text_en: Too difficult
+        hodnota: 1
+      - text: Akurát
+        text_en: Just right
+        hodnota: 0
+      - text: Nenáročný
+        text_en: Not so difficult
+        hodnota: -1
+      - text: Triviálny
+        text_en: Trivial
+        hodnota: -2
+    position: 2
 
-    - text: Ako zaujímavá je pre Teba náplň študijného programu?
-      text_en: How interesting are the topics of the study program?
-      popis:
-      popis_en:
-      kategoria:  studijnyprogram
-      komentar:   No
-      hviezdicky: Yes
-      position:   3
+  - text: Ako zaujímavá je pre Teba náplň študijného programu?
+    text_en: How interesting are the topics of the study program?
+    popis:
+    popis_en:
+    kategoria: studijnyprogram
+    komentar: No
+    hviezdicky: Yes
+    position: 3
 
-    # - text:   Ak si už absolvoval/a štátne skúšky, ako ich hodnotíš?
-    #   text_en: If you have already passed state exams, how do you rate them?
-    #   popis:   Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Vyhovovala Ti forma, akou prebehli?
-    #   popis_en:  What do you want to praise and what do you think could be improved? Did you like the way they went?
-    #   kategoria:  studijnyprogram
-    #   komentar:   Yes
-    #   hviezdicky: No
-    #   position:   4
-      
-    - text: Aký bol Tvoj obľúbený predmet(y) v tomto semestri a prečo?
-      text_en: What was your favourite course(s) this semester and why?
-      popis:
-      popis_en:
-      kategoria:  studijnyprogram
-      komentar:   Yes
-      hviezdicky: No
-      position:   5
+  # - text:   Ak si už absolvoval/a štátne skúšky, ako ich hodnotíš?
+  #   text_en: If you have already passed state exams, how do you rate them?
+  #   popis:   Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Vyhovovala Ti forma, akou prebehli?
+  #   popis_en:  What do you want to praise and what do you think could be improved? Did you like the way they went?
+  #   kategoria:  studijnyprogram
+  #   komentar:   Yes
+  #   hviezdicky: No
+  #   position:   4
 
-    - text: Ako hodnotíš pôsobenie garanta a tútora(ov) študijného programu? Ak si prvák/prváčka, ako hodnotíš mentorov z radov študentov?
-      text_en: How do you evaluate the director and tutor(s) of the study program? If you are a first-year student, how do you rate the student-mentors?
-      popis:
-      popis_en:
-      kategoria:  studijnyprogram
-      komentar:   Yes
-      hviezdicky: No
-      position:   6
+  - text: Ktoré predmety sú pre teba zaujímavé a užitočné?
+    text_en: Which subjects are interesting and useful for you?
+    popis:
+    popis_en:
+    kategoria: studijnyprogram
+    komentar: Yes
+    hviezdicky: No
+    position: 5
 
-    - text: Napíš Tvoj názor na študijný program.
-      text_en: Write your opinion on the study program.
-      popis: Uveď jeho pozitíva a negatíva, prípadne návrhy na jeho zlepšenie, napr. v skladbe predmetov, ich nadväznosti, rozdelení kreditov a podobne. Prípadne, prečo by si tento program odporúčal/a alebo neodporúčal/a záujemcom o štúdium. K osobnostiam jednotlivých učiteľov sa vyjadruj výhradne v otázkach venovaných konkrétnym učiteľom.
-      popis_en: What are the positives and negatives of the program, what are your suggestions for improvement, for example, the composition of courses, their interconnection, division of credits, etc. Why would you recommend / not recommend this study program to other students? If you have comments regarding individual teachers, please use the space provided for that purpose in questions regarding those teachers.
-      kategoria:  studijnyprogram
-      komentar:   Yes
-      hviezdicky: No
-      position:   7
+  - text: Ako hodnotíš pôsobenie garanta a tútora(ov) študijného programu? Ak si prvák/prváčka, ako hodnotíš mentorov z radov študentov?
+    text_en: How do you evaluate the director and tutor(s) of the study program? If you are a first-year student, how do you rate the student-mentors?
+    popis:
+    popis_en:
+    kategoria: studijnyprogram
+    komentar: Yes
+    hviezdicky: No
+    position: 6
 
-# otazky ku predmetom
-    - text: Celkové hodnotenie kvality predmetu.
-      text_en: Overall assessment of the quality of the course.
-      popis:  
-      popis_en:
-      kategoria:  predmety
-      komentar:   No
-      hviezdicky: Yes
-      position:   1
-      hlavne_hodnotenie_predmetu: Yes
+  - text: Napíš Tvoj celkový názor na študijný program.
+    text_en: Write your overall opinion on the study program.
+    popis: Uveď jeho pozitíva a negatíva, prípadne návrhy na jeho zlepšenie, napr. v skladbe predmetov, ich nadväznosti, rozdelení kreditov a podobne. Prípadne, prečo by si tento program odporúčal/a alebo neodporúčal/a záujemcom o štúdium. K osobnostiam jednotlivých učiteľov sa vyjadruj výhradne v otázkach venovaných konkrétnym učiteľom.
+    popis_en: What are the positives and negatives of the program, what are your suggestions for improvement, for example, the composition of courses, their interconnection, division of credits, etc. Why would you recommend / not recommend this study program to other students? If you have comments regarding individual teachers, please use the space provided for that purpose in questions regarding those teachers.
+    kategoria: studijnyprogram
+    komentar: Yes
+    hviezdicky: No
+    position: 7
 
-    - text: Ako náročná bola podľa Teba preberaná látka? 
-      text_en: How difficult was the course?
-      popis:  
-      popis_en:
-      kategoria:  predmety
-      komentar:   No
-      hviezdicky: No
-      moznosti:
-          - text: Nepochopiteľná.
-            text_en: Incomprehensible.
-            hodnota: 2
-          - text: Nadsadená.
-            text_en: Too difficult.
-            hodnota: 1
-          - text: Akurát.
-            text_en: Just right.
-            hodnota: 0
-          - text: Nenáročná.
-            text_en: Too easy.
-            hodnota: -1
-          - text: Triviálna.
-            text_en: Trivial.
-            hodnota: -2
-      position:   2
+  # otazky ku predmetom
+  - text: Celkové hodnotenie kvality predmetu.
+    text_en: Overall assessment of the quality of the course.
+    popis:
+    popis_en:
+    kategoria: predmety
+    komentar: No
+    hviezdicky: Yes
+    position: 1
+    hlavne_hodnotenie_predmetu: Yes
 
-    - text: Bol obsah predmetu pre Teba zaujímavý?
-      text_en: Was the course interesting for you?
-      popis:
-      popis_en:
-      kategoria:  predmety
-      komentar:   No
-      hviezdicky: Yes
-      position:   3
+  - text: Ako náročná bola podľa Teba preberaná látka?
+    text_en: How difficult was the course?
+    popis:
+    popis_en:
+    kategoria: predmety
+    komentar: No
+    hviezdicky: No
+    moznosti:
+      - text: Nepochopiteľná.
+        text_en: Incomprehensible.
+        hodnota: 2
+      - text: Náročná.
+        text_en: Too difficult.
+        hodnota: 1
+      - text: Akurát.
+        text_en: Just right.
+        hodnota: 0
+      - text: Nenáročná.
+        text_en: Too easy.
+        hodnota: -1
+      - text: Triviálna.
+        text_en: Trivial.
+        hodnota: -2
+    position: 2
 
-    - text: Aké bolo množstvo práce vzhľadom na počet kreditov?
-      text_en: Was the amount of work appropriate considering the number of credits?
-      popis: Zhodnoť množstvo domácich úloh, projektov, priebežné písomky, množstvo nového učiva a pod.
-      popis_en: Assess the amount of homework, projects, exams, the amount of the new course matter, etc.
-      kategoria:  predmety
-      komentar:   No
-      hviezdicky: No
-      moznosti:
-          - text: Totálny zabijak.
-            text_en: Absolute killer.
-            hodnota: 2
-          - text: Pomerne veľké.
-            text_en: Too much.
-            hodnota: 1
-          - text: Akurát.
-            text_en: Just right.
-            hodnota: 0
-          - text: Pomerne malé.
-            text_en: Too little.
-            hodnota: -1
-          - text: Aká práca?
-            text_en: What work?
-            hodnota: -2
-      position:   4
+  - text: Bol obsah predmetu pre Teba zaujímavý?
+    text_en: Was the course interesting for you?
+    popis:
+    popis_en:
+    kategoria: predmety
+    komentar: No
+    hviezdicky: Yes
+    position: 3
 
-    - text: Koľko hodín práce si v priemere týždenne venoval tomuto predmetu?
-      text_en: How much time did you spend on this course every week on average?
-      popis: Započítaj čas strávený na prednáškach, cvičeniach, domácich úlohách a prípravu na písomky a skúšky.
-      popis_en: Include time spent on lectures, exercises, homeworks, and the time spent while preparing for midterms and exams.
-      kategoria:  predmety
-      komentar:   No
-      hviezdicky: No
-      moznosti:
-          - text: Hodinu a menej.
-            text_en: One hour or less.
-            hodnota: 1
-          - text: Dve hodiny.
-            text_en: Two hours.
-            hodnota: 2
-          - text: Štyri hodiny.
-            text_en: Four hours.
-            hodnota: 4
-          - text: Šesť hodín.
-            text_en: Six hours.
-            hodnota: 6
-          - text: Osem hodín.
-            text_en: Eight hours.
-            hodnota: 8
-          - text: Nežijem ničím iným.
-            text_en: I live for nothing else.
-            hodnota: 16
-      position:   5
+  - text: Boli jasne stanovené požiadavky a spôsob hodnotenia predmetu?
+    text_en: Were the requirements and the evaluation criteria of the course clearly defined?
+    popis:
+    popis_en:
+    kategoria: predmety
+    komentar: No
+    hviezdicky: No
+    moznosti:
+      - text: Určite áno.
+        text_en: Definitely yes.
+        hodnota: 2
+      - text: Skôr áno.
+        text_en: Yes.
+        hodnota: 1
+      - text: Skôr nie.
+        text_en: No.
+        hodnota: -1
+      - text: Určite nie.
+        text_en: Definitely not.
+        hodnota: -2
+    position: 4
 
-    - text: Boli jasne stanovené požiadavky a spôsob hodnotenia predmetu?
-      text_en: Were the requirements and the evaluation criteria of the course clearly defined?
-      popis:
-      popis_en:
-      kategoria:  predmety
-      komentar:   No
-      hviezdicky: No
-      moznosti:
-          - text: Určite áno.
-            text_en: Definitely yes.
-            hodnota: 2
-          - text: Skôr áno.
-            text_en: Yes.
-            hodnota: 1
-          - text: Skôr nie.
-            text_en: No.
-            hodnota: -1
-          - text: Určite nie.
-            text_en: Definitely not.
-            hodnota: -2
-      position:   6
+  - text: Aké bolo množstvo práce vzhľadom na počet kreditov?
+    text_en: Was the amount of work appropriate considering the number of credits?
+    popis: Zhodnoť množstvo domácich úloh, projektov, priebežné písomky, množstvo nového učiva a pod.
+    popis_en: Assess the amount of homework, projects, exams, the amount of the new course matter, etc.
+    kategoria: predmety
+    komentar: No
+    hviezdicky: No
+    moznosti:
+      - text: Totálny zabijak.
+        text_en: Absolute killer.
+        hodnota: 2
+      - text: Pomerne veľké.
+        text_en: Too much.
+        hodnota: 1
+      - text: Akurát.
+        text_en: Just right.
+        hodnota: 0
+      - text: Pomerne malé.
+        text_en: Too little.
+        hodnota: -1
+      - text: Aká práca?
+        text_en: What work?
+        hodnota: -2
+    position: 5
 
-    - text: Zhruba akú časť výučby (prednášky, cvičenia a pod.) si absolvoval (či už prezenčne alebo dištančne)?
-      text_en: Approximately what part of the in-class teaching (lectures, exercises, etc.) did you attend (either face-to-face or online)?
-      popis:
-      popis_en:
-      kategoria:  predmety
-      komentar:   No
-      hviezdicky: No
-      moznosti:
-          - text:     90-100%
-            text_en:  90-100%
-            hodnota:  100
-          - text:     60-90% 
-            text_en:  60-90%
-            hodnota:  75
-          - text:     30-60% 
-            text_en:  30-60%
-            hodnota:  45
-          - text:     10-30% 
-            text_en:  10-30%
-            hodnota:  20
-          - text:     Menej ako 10%.
-            text_en:  Less than 10%.
-            hodnota:  0
-      position:   7
+  - text: Koľko hodín práce si v priemere týždenne venoval tomuto predmetu mimo prednášok a cvičení?
+    text_en: How much time did you spend on this course every week on average outside of lectures and seminars?
+    popis: Započítaj čas strávený na domácich úlohách a prípravu na písomky a skúšky.
+    popis_en: Include time spent on homeworks, and the time spent while preparing for midterms and exams.
+    kategoria: predmety
+    komentar: No
+    hviezdicky: No
+    moznosti:
+      - text: Hodinu a menej.
+        text_en: One hour or less.
+        hodnota: 1
+      - text: Dve hodiny.
+        text_en: Two hours.
+        hodnota: 2
+      - text: Štyri hodiny.
+        text_en: Four hours.
+        hodnota: 4
+      - text: Šesť hodín.
+        text_en: Six hours.
+        hodnota: 6
+      - text: Osem hodín.
+        text_en: Eight hours.
+        hodnota: 8
+      - text: Nežijem ničím iným.
+        text_en: I live for nothing else.
+        hodnota: 16
+    position: 6
 
-    - text: Sem napíš slovné vyjadrenie k tomuto predmetu.
-      text_en: You can include additional comments about this course here.
-      popis: Zdôvodni, prípadne doplň svoje hodnotenie vyššie — či už pozitívne, alebo negatívne. Konštruktívne návrhy na zlepšenie obsahu či formy priebehu vyučovania sú vítané.
-      popis_en: You can justify and explain your evaluation of the course above (both positive and negative). Constructive proposals for improvement of the course content and organization are welcome.
-      kategoria:  predmety
-      komentar:   Yes
-      hviezdicky: No
-      position:   8
+  - text: Zhruba akú časť výučby (prednášky, cvičenia a pod.) si absolvoval?
+    text_en: Approximately what part of the in-class teaching (lectures, exercises, etc.) did you attend?
+    popis:
+    popis_en:
+    kategoria: predmety
+    komentar: No
+    hviezdicky: No
+    moznosti:
+      - text: 90-100%
+        text_en: 90-100%
+        hodnota: 100
+      - text: 60-90%
+        text_en: 60-90%
+        hodnota: 75
+      - text: 30-60%
+        text_en: 30-60%
+        hodnota: 45
+      - text: 10-30%
+        text_en: 10-30%
+        hodnota: 20
+      - text: Menej ako 10%.
+        text_en: Less than 10%.
+        hodnota: 0
+    position: 7
 
-# otazky ku kombinacii predmet-ucitel
-    - text: Celkové hodnotenie vyučujúceho v tomto predmete.
-      text_en: Overall rating of the teacher's performance in this course.
-      popis:
-      popis_en:
-      kategoria:  predmety_ucitel
-      komentar:   No
-      hviezdicky: Yes
-      ucitel:     Yes
-      position:   1
-      hlavne_hodnotenie_ucitela: Yes
+  - text: Sem napíš slovné vyjadrenie k tomuto predmetu.
+    text_en: You can include additional comments about this course here.
+    popis: Zdôvodni, prípadne doplň svoje hodnotenie vyššie — či už pozitívne, alebo negatívne. Konštruktívne návrhy na zlepšenie obsahu či formy priebehu vyučovania sú vítané.
+    popis_en: You can justify and explain your evaluation of the course above (both positive and negative). Constructive proposals for improvement of the course content and organization are welcome.
+    kategoria: predmety
+    komentar: Yes
+    hviezdicky: No
+    position: 8
 
-    - text: Schopnosť a ochota vyučujúceho komunikovať so študentmi a odpovedať na ich otázky.
-      text_en: The teacher's ability and willingness to communicate with students and answer their questions.
-      popis:
-      popis_en:
-      kategoria:  predmety_ucitel
-      komentar:   No
-      hviezdicky: Yes
-      ucitel:     Yes
-      position:   2
+  # otazky ku kombinacii predmet-ucitel
+  - text: Celkové hodnotenie vyučujúceho v tomto predmete.
+    text_en: Overall rating of the teacher's performance in this course.
+    popis:
+    popis_en:
+    kategoria: predmety_ucitel
+    komentar: No
+    hviezdicky: Yes
+    ucitel: Yes
+    position: 1
+    hlavne_hodnotenie_ucitela: Yes
 
-    - text: Ústny prejav a prezentačné zručnosti vyučujúceho.
-      text_en: Oral expression and presentation skills of the teacher.
-      popis:
-      popis_en:
-      kategoria:  predmety_ucitel
-      komentar:   No
-      hviezdicky: Yes
-      ucitel:     Yes
-      position:   3
+  - text: Schopnosť a ochota vyučujúceho komunikovať so študentmi a odpovedať na ich otázky.
+    text_en: The teacher's ability and willingness to communicate with students and answer their questions.
+    popis:
+    popis_en:
+    kategoria: predmety_ucitel
+    komentar: No
+    hviezdicky: Yes
+    ucitel: Yes
+    position: 2
 
-    - text: Napíšte Váš názor alebo pripomienky k učiteľovi a jeho pôsobeniu v tomto predmete.
-      text_en: Write your opinion or comments about the teacher and his performance in this course.
-      popis:
-      popis_en:
-      kategoria:  predmety_ucitel
-      komentar:   Yes
-      hviezdicky: No
-      ucitel:     Yes
-      position:   4
+  - text: Ústny prejav a prezentačné zručnosti vyučujúceho.
+    text_en: Oral expression and presentation skills of the teacher.
+    popis:
+    popis_en:
+    kategoria: predmety_ucitel
+    komentar: No
+    hviezdicky: Yes
+    ucitel: Yes
+    position: 3
 
+  - text: Sem napíš slovné vyjadrenie k tomuto vyučujúcemu. Zdôvodni, prípadne doplň svoje hodnotenie vyššie – či už pozitívne, alebo negatívne.
+    text_en: Write a verbal comment about this teacher here. Justify or supplement your rating above – whether positive or negative.
+    popis: Konštruktívne návrhy na zlepšenie obsahu či formy priebehu vyučovania sú vítané.
+    popis_en: Constructive suggestions for improving the content or form of teaching are welcome.
+    kategoria: predmety_ucitel
+    komentar: Yes
+    hviezdicky: No
+    ucitel: Yes
+    position: 4
 
-# vseobecne otazky - fakulta
-    - text: Aký je Tvoj celkový dojem z priestorov fakulty a ďalších súčastí univerzity?
-      text_en: What is your impression of the faculty and university premises? 
-      popis: Teda napr. vybavenie prednáškových, počítačových a laboratórnych miestností, voľnočasových priestorov pre študentov, atď.
-      popis_en: This includes, for example, lecture rooms, computer rooms, labs, student lounges, etc.
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: No
-      position:   1
-      
-    - text: Ako hodnotíš služby poskytované fakultou?
-      text_en: How do you rate services provided by the faculty?
-      popis: Teda napr. fakultnú knižnicu, rozvrh, študijné oddelenie, referát doktorandského štúdia, atď.
-      popis_en: This includes, for example, the faculty library, the timetable, the study department, the doctoral studies office, etc.
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: No
-      position:   2
+  # vseobecne otazky - fakulta
+  - text: Aký je Tvoj celkový dojem z priestorov fakulty a ďalších súčastí univerzity?
+    text_en: What is your impression of the faculty and university premises?
+    popis: Teda napr. vybavenie prednáškových, počítačových a laboratórnych miestností, voľnočasových priestorov pre študentov, atď.
+    popis_en: This includes, for example, lecture rooms, computer rooms, labs, student lounges, etc.
+    kategoria: fakulta
+    komentar: Yes
+    hviezdicky: No
+    position: 1
 
-    - text: Ako hodnotíš úroveň stravovacích služieb?
-      text_en: How do you rate food services?
-      popis:
-      popis_en:
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: Yes
-      position:   3
- 
-    - text: Aké aktivity na zlepšenie študentského života by si na fakulte privítal?
-      text_en: What activities would you like to see at the faculty to improve student life?
-      popis:
-      popis_en:
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: No
-      position:   4
-      
-    # - text: Zúčastnil/a si sa Študentskej vedeckej konferencie (ŠVK)?
-    #   text_en: Did you attend the Student Science Conference (ŠVK)?
-    #   popis:
-    #   popis_en:
-    #   kategoria:  fakulta
-    #   komentar:   No
-    #   hviezdicky: No
-    #   moznosti:
-    #       - text: Áno, ako súťažiaci/a.
-    #         text_en: Yes, as a competitor.
-    #         hodnota: 1
-    #       - text: Áno, ale iba som sa bol/a pozrieť, nesúťažil/a som. 
-    #         text_en: "Yes, but I just came to see the presentations, I didn't compete."
-    #         hodnota: 0
-    #       - text: Nie.
-    #         text_en: No.
-    #         hodnota: -1
-    #   position: 5
+  - text: Ako hodnotíš služby poskytované fakultou?
+    text_en: How do you rate services provided by the faculty?
+    popis: Teda napr. fakultnú knižnicu, rozvrh, študijné oddelenie, referát doktorandského štúdia, atď.
+    popis_en: This includes, for example, the faculty library, the timetable, the study department, the doctoral studies office, etc.
+    kategoria: fakulta
+    komentar: Yes
+    hviezdicky: No
+    position: 2
 
-    # - text: Ak si na ŠVK bol/a, čo sa Ti na nej páčilo a čo nepáčilo? Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Ak si nebol/a, prečo?
-    #   text_en: "If you attended the Student Science Conference (ŠVK), what did you like about it, and what did you not like? What do you want to praise, and what do you think could be improved? If you didn't attend, why?"
-    #   popis:  
-    #   popis_en: 
-    #   kategoria:  fakulta
-    #   komentar:   Yes
-    #   hviezdicky: No
-    #   position:   6
+  - text: Ako hodnotíš úroveň stravovacích služieb?
+    text_en: How do you rate food services?
+    popis:
+    popis_en:
+    kategoria: fakulta
+    komentar: Yes
+    hviezdicky: Yes
+    position: 3
 
-    - text: Ako hodnotíš študentskú anketu?
-      text_en: How do you rate this student survey?
-      popis:  
-      popis_en: 
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: Yes
-      position:   7
+  - text: Ako hodnotíš aktivity a podujatia organizované na fakulte mimo vyučovania, prípadne aké aktivity na zlepšenie študentského života by si na fakulte privítal?
+    text_en: What activities to improve student life would you welcome at the faculty?
+    popis: Pomenuj konkrétne. Prípadne napíš do organizovania, ktorých aktivít by si sa chcel zapojiť?
+    popis_en: Be specific. Alternatively, write which of those activities you would like to get involved in organizing.
+    kategoria: fakulta
+    komentar: Yes
+    hviezdicky: No
+    position: 4
 
-    - text: Ak sa chceš vyjadriť k čomukoľvek ďalšiemu, napíš to, prosím, sem.
-      text_en: If you have any further comments, please write them here.
-      popis:
-      popis_en: 
-      kategoria:  fakulta
-      komentar:   Yes
-      hviezdicky: No
-      position:   8
-...
+  # - text: Zúčastnil/a si sa Študentskej vedeckej konferencie (ŠVK)?
+  #   text_en: Did you attend the Student Science Conference (ŠVK)?
+  #   popis:
+  #   popis_en:
+  #   kategoria:  fakulta
+  #   komentar:   No
+  #   hviezdicky: No
+  #   moznosti:
+  #       - text: Áno, ako súťažiaci/a.
+  #         text_en: Yes, as a competitor.
+  #         hodnota: 1
+  #       - text: Áno, ale iba som sa bol/a pozrieť, nesúťažil/a som.
+  #         text_en: "Yes, but I just came to see the presentations, I didn't compete."
+  #         hodnota: 0
+  #       - text: Nie.
+  #         text_en: No.
+  #         hodnota: -1
+  #   position: 5
+
+  # - text: Ak si na ŠVK bol/a, čo sa Ti na nej páčilo a čo nepáčilo? Čo chceš pochváliť a čo by sa naopak podľa teba dalo zlepšiť? Ak si nebol/a, prečo?
+  #   text_en: "If you attended the Student Science Conference (ŠVK), what did you like about it, and what did you not like? What do you want to praise, and what do you think could be improved? If you didn't attend, why?"
+  #   popis:
+  #   popis_en:
+  #   kategoria:  fakulta
+  #   komentar:   Yes
+  #   hviezdicky: No
+  #   position:   6
+
+  - text: Ako hodnotíš študentskú anketu?
+    text_en: How do you rate this student survey?
+    popis:
+    popis_en:
+    kategoria: fakulta
+    komentar: Yes
+    hviezdicky: No
+    position: 7
+
+  - text: Ak sa chceš vyjadriť k čomukoľvek ďalšiemu, napíš to, prosím, sem.
+    text_en: If you have any further comments, please write them here.
+    popis:
+    popis_en:
+    kategoria: fakulta
+    komentar: Yes
+    hviezdicky: No
+    position: 8
