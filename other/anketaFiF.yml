@@ -342,6 +342,22 @@ otazky:
       hviezdicky: Yes
       position:   5
 
+    - text:   Zažili ste počas doterajšieho štúdia situácie ponižujúceho alebo nerešpektujúceho správania (na základe pohlavia, etnického pôvodu, náboženstva, veku či sexuálnej orientácie)?
+      text_en:  Have you experienced situations of humiliating or disrespectful behavior during your studies (based on gender, ethnicity, religion, age, or sexual orientation)?
+      popis:
+      popis_en:
+      kategoria:  fakulta
+      komentar:   Yes
+      hviezdicky: No
+      moznosti:
+          - text: Áno
+            text_en: Yes
+            hodnota: 1
+          - text: Nie
+            text_en: No
+            hodnota: -1
+      position:   6
+
 # vseobecne otazky - ostatne
     - text:   Chcete sa ešte k niečomu vyjadriť?
       text_en: Do you want to address anything else?
