@@ -142,4 +142,21 @@ class AnswerRepository extends EntityRepository {
         $query->execute($subjectCodes);
         return $query->fetchAll(\PDO::FETCH_ASSOC);
     }
+
+    public function getSubjectsRatings() {
+	$sql = 'SELECT code,name,slug,season_id,score '.
+               'FROM Subject,Question, '.
+               '(SELECT subject_id,Answer.question_id, '.
+               'AVG(evaluation) AS score, '.
+               'COUNT(evaluation) AS number '.
+               'FROM Answer,Choice '.
+               'WHERE Answer.option_id=Choice.id '.
+               'GROUP BY subject_id,teacher_id,Answer.question_id) AS Summary '.
+               'WHERE Summary.question_id=Question.id '.
+               'AND Summary.subject_id=Subject.id '.
+               'AND isSubjectEvaluation=1;';
+        $query = $this->getEntityManager()->getConnection()->prepare($sql);
+        $query->execute();
+        return $query->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }

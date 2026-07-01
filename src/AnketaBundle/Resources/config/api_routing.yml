@@ -2,3 +2,7 @@ api_results:
     pattern: /api/v1/results/
     defaults: { _controller: AnketaBundle:Api:results,  _format: json }
     options: { i18n: false }
+api_ratings:
+    pattern: /api/v1/ratings/
+    defaults: { _controller: AnketaBundle:Api:ratings,  _format: json }
+    options: { i18n: false }
