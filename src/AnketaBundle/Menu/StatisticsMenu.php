@@ -113,11 +113,13 @@ class StatisticsMenu
                     }
                 }
 
-                // Add "All Comments" under this season
-                $seasonItem->children['all_responses'] = new MenuItem(
-                    $trans->trans('statistics.menu.vsetky_komentare'),
-                    $this->generateUrl('responses_list',
-                        array('season_slug' => $season->getSlug())));
+                // Add "All Comments" under this season.
+                if ($access->canSeeResponses($season)) {
+                    $seasonItem->children['all_responses'] = new MenuItem(
+                        $trans->trans('statistics.menu.vsetky_komentare'),
+                        $this->generateUrl('responses_list',
+                            array('season_slug' => $season->getSlug())));
+                }
 
                 // Add "My subjects" under this season.
                 if ($access->hasOwnSubjects($season)) {

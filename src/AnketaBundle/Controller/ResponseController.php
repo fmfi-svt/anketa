@@ -97,6 +97,11 @@ class ResponseController extends Controller {
     }
 
     public function listAction($season_slug) {
+        $season = $this->get('doctrine.orm.entity_manager')->getRepository('AnketaBundle:Season')
+            ->findOneBy(array('slug' => $season_slug));
+        if ($season !== null && !$this->get('anketa.access.statistics')->canSeeResponses($season)) {
+            throw new AccessDeniedException();
+        }
         return $this->listResponses($season_slug, NULL);
     }
 
