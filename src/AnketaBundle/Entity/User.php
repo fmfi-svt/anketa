@@ -103,7 +103,7 @@ class User implements UserInterface, EquatableInterface {
      * @return string[] roles
      */
     public function getRoles() {
-        $roles = array();
+        $roles = array('ROLE_USER');
         foreach ($this->roles as $role) {
             $roles[] = $role->getRole();
         }
