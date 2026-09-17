@@ -93,7 +93,7 @@ services:
     anketa.ldap_retriever:
         class: AnketaBundle\Integration\LDAPRetriever
         arguments:
-            - "ldaps://jas2.uniba.sk/,ldaps://jas1.uniba.sk/"
+            - "ldaps://jas1.uniba.sk/"
             - "dc=uniba,dc=sk"
     anketa.ldap_user_source:
         class: AnketaBundle\Security\LDAPUserSource
