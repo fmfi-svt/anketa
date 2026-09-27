@@ -1,23 +1,23 @@
-FROM php:5.5-apache AS base
+FROM php:7.2-apache AS base
 COPY --from=composer/composer:2.2-bin /composer /usr/local/bin/
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/
 # For some reason the image does not come with php.ini, so it defaults to log_errors=Off. :C
-ADD https://github.com/php/php-src/raw/refs/heads/PHP-5.5/php.ini-production /usr/local/etc/php/php.ini
+ADD https://github.com/php/php-src/raw/refs/heads/PHP-7.2/php.ini-production /usr/local/etc/php/php.ini
 RUN <<EOF
     set -e
-    # jessie is too old and the default sources.list doesn't work.
+    # buster is too old and the default sources.list doesn't work.
     echo '
-        deb http://archive.debian.org/debian/ jessie main
-        deb-src http://archive.debian.org/debian/ jessie main
-        deb http://archive.debian.org/debian-security/ jessie/updates main
-        deb-src http://archive.debian.org/debian-security/ jessie/updates main
+        deb http://archive.debian.org/debian/ buster main
+        deb-src http://archive.debian.org/debian/ buster main
+        deb http://archive.debian.org/debian-security/ buster/updates main
+        deb-src http://archive.debian.org/debian-security/ buster/updates main
     ' > /etc/apt/sources.list
     # unzip and git are needed by composer.
     # libldap2-dev is needed by PHP ldap, installed below.
     # locales is needed for locale-gen below.
-    # ca-certificates needs to be updated for connections to repo.packagist.org (it uses Let's Encrypt).
-    apt-get update --allow-unauthenticated
-    apt-get install -y --no-install-recommends --allow-unauthenticated unzip git libldap2-dev locales ca-certificates
+    # acl is needed by scripts/init_all.sh for setfacl.
+    apt-get update
+    apt-get install -y --no-install-recommends unzip git libldap2-dev locales acl
     rm -rf /var/lib/apt/lists/*
     # For some reason the image does not come with ldap and pdo_mysql. This compiles them from source. :C
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
