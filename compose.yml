@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    environment:
+      APP_BASE_PATH: /fmph
+    ports:
+      - "127.0.0.1:8080:80"
+    configs:
+      - source: config_local
+        target: /var/www/html/app/config/config_local.yml
+
+configs:
+  config_local:
+    file: ./app/config/config_local.yml

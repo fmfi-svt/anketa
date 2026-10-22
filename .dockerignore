@@ -1,0 +1,9 @@
+.git
+app/config/config_local.yml
+app/cache
+app/logs
+app/bootstrap.php.cache
+vendor
+web/bundles
+db
+composer.phar
